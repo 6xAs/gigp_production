@@ -1,6 +1,4 @@
 import streamlit as st
-
-from utils.firebase_utils import init_firestore
 from views.dashboards.view_home_dash import dash_home
 from views.membros.view_membros_dash import gestao_membros
 from views.membros.view_perfil_membro import view_perfil_membro
@@ -25,21 +23,7 @@ def _get_authenticated_email() -> str | None:
 def _authorize_email(email: str | None) -> tuple[bool, str | None]:
     if not email:
         return False, None
-    db = init_firestore()
-    doc_id = email.strip().lower()
-    snapshot = db.collection("users").document(doc_id).get()
-    if not snapshot.exists:
-        return False, None
-    data = snapshot.to_dict() or {}
-    status = data.get("status", "")
-    if isinstance(status, bool):
-        is_active = status
-    else:
-        status_text = str(status).strip().lower()
-        is_active = status_text in {"active", "ativo", "ativa", "enabled"}
-    if not is_active:
-        return False, None
-    return True, data.get("role")
+    return True, None
 
 ###################### CONFIGURAÇÃO DA PÁGINA ######################
 st.set_page_config(
@@ -63,13 +47,14 @@ autorizado, role = _authorize_email(email)
 if not autorizado:
     st.markdown(
         """
-        <div style="padding: 1.25rem; border: 1px solid #ffd1d1; border-radius: 12px; background: #fff5f5;">
-          <h2 style="margin: 0 0 .5rem 0;">⛔ Acesso negado</h2>
+        <div style="padding: 1.25rem; border: 1px solid #ffe4b5; border-radius: 12px; background: #fff8e8;">
+          <h2 style="margin: 0 0 .5rem 0;">🔒 Login necessário</h2>
           <p style="margin: 0 0 .75rem 0;">
-            Seu email não está autorizado para este app.
+            Não foi possível identificar seu email.
           </p>
           <p style="margin: 0; font-size: .95rem;">
-            Fale com o administrador e peça para liberar seu email no Streamlit Cloud.
+            Confirme se o app está marcado como <strong>Private</strong> no Streamlit Cloud e
+            se seu email está na lista de permitidos.
           </p>
         </div>
         """,
