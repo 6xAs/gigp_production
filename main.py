@@ -45,34 +45,10 @@ st.logo(
 email = _get_authenticated_email()
 autorizado, role = _authorize_email(email)
 if not autorizado:
-    debug_user = getattr(st, "experimental_user", None)
-    debug_email = None
-    if debug_user:
-        debug_email = getattr(debug_user, "email", None)
-        if not debug_email:
-            try:
-                debug_email = debug_user.get("email")
-            except Exception:
-                debug_email = None
-    st.markdown(
-        """
-        <div style="padding: 1.25rem; border: 1px solid #ffe4b5; border-radius: 12px; background: #fff8e8;">
-          <h2 style="margin: 0 0 .5rem 0;">🔒 Login necessário</h2>
-          <p style="margin: 0 0 .75rem 0;">
-            Não foi possível identificar seu email.
-          </p>
-          <p style="margin: 0; font-size: .95rem;">
-            Confirme se o app está marcado como <strong>Private</strong> no Streamlit Cloud e
-            se seu email está na lista de permitidos.
-          </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
+    st.warning(
+        "Não foi possível identificar seu email via Streamlit Cloud. "
+        "Continuando sem validação de usuário."
     )
-    with st.expander("Diagnóstico rápido"):
-        st.write("experimental_user existe?", bool(debug_user))
-        st.write("email detectado:", debug_email)
-    st.stop()
 
 ###################### TÍTULO ######################
 st.title("📋 Gestão Interna GP MECATRÔNICA")
