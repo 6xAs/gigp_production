@@ -50,13 +50,20 @@ def _render_login():
             st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
         else:
             started = st.session_state.login_started_at or time.time()
-            if time.time() - started > 8:
+            elapsed = time.time() - started
+            if elapsed > 8:
                 st.session_state.login_future = None
                 st.session_state.login_started_at = None
                 st.error("Não foi possível validar o login agora. Tente novamente.")
             else:
+                if hasattr(st, "autorefresh"):
+                    st.autorefresh(interval=1000, key="login_wait")
                 st.info("Validando acesso...")
-            return
+                if st.button("Cancelar", use_container_width=True):
+                    st.session_state.login_future = None
+                    st.session_state.login_started_at = None
+            if st.session_state.login_future is not None:
+                return
 
     col_esq, col_centro, col_dir = st.columns([1, 1, 1])
     with col_centro:
