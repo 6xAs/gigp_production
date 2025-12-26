@@ -27,18 +27,24 @@ def _render_login():
         with st.form("form_login"):
             usuario = st.text_input("Email", placeholder="ex: gestor@empresa.com")
             senha = st.text_input("Senha", type="password", placeholder="••••••••")
-            entrar = st.form_submit_button("Entrar", use_container_width=True)
+            entrar = st.form_submit_button("Entrar", width="stretch")
             if entrar:
-                ok, role, nome = autenticar_usuario(usuario, senha)
-                if ok:
-                    st.session_state.autenticado = True
-                    st.session_state.usuario = usuario.strip()
-                    st.session_state.nome_usuario = nome
-                    st.session_state.role = role
-                    st.success("Login realizado com sucesso. Bem-vindo(a)!")
-                    st.rerun()
-                else:
-                    st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
+                try:
+                    with st.spinner("Validando acesso..."):
+                        ok, role, nome = autenticar_usuario(usuario, senha)
+                    if ok:
+                        st.session_state.autenticado = True
+                        st.session_state.usuario = usuario.strip()
+                        st.session_state.nome_usuario = nome
+                        st.session_state.role = role
+                        st.success("Login realizado com sucesso. Bem-vindo(a)!")
+                        st.rerun()
+                    else:
+                        st.error(
+                            "Email ou senha inválidos. Verifique as credenciais e tente novamente."
+                        )
+                except Exception as exc:
+                    st.error(f"Erro ao autenticar: {exc}")
 
 
 def _realizar_logout():

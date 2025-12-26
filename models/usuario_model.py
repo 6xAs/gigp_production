@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import logging
 from typing import Tuple
 
 from utils.firebase_utils import init_firestore
+
+logger = logging.getLogger(__name__)
 
 
 def _is_active(status: object) -> bool:
@@ -18,15 +21,23 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
         return False, None, None
 
     email_normalizado = email.strip().lower()
-    db = init_firestore()
-    doc_ref = db.collection("users").document(email_normalizado).get()
-    data = doc_ref.to_dict() if doc_ref.exists else None
+    try:
+        db = init_firestore()
+        doc_ref = db.collection("users").document(email_normalizado).get()
+        data = doc_ref.to_dict() if doc_ref.exists else None
+    except Exception:
+        logger.exception("Falha ao consultar o Firestore para o usuário %s", email_normalizado)
+        return False, None, None
 
     if not data:
-        query = db.collection("users").where("email", "==", email_normalizado).limit(1).get()
-        if query:
-            data = query[0].to_dict()
-        else:
+        try:
+            query = db.collection("users").where("email", "==", email_normalizado).limit(1).get()
+            if query:
+                data = query[0].to_dict()
+            else:
+                return False, None, None
+        except Exception:
+            logger.exception("Falha ao buscar usuário por campo email: %s", email_normalizado)
             return False, None, None
 
     senha_db = data.get("senha")
