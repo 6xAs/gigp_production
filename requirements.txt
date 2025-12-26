@@ -4,7 +4,7 @@ matplotlib
 seaborn
 plotly
 firebase-admin
-streamlit
+streamlit>=1.29
 streamlit-authenticator
 google-cloud-firestore
 
