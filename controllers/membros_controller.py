@@ -58,10 +58,13 @@ def listar_membros_firestore():
     global _SINCRONIZACAO_REALIZADA
     verificar_e_persistir_dados()
     if not _SINCRONIZACAO_REALIZADA:
-        try:
-            sincronizar_campos_membros()
-        except Exception:
-            pass
+        if os.path.exists(CSV_PATH):
+            try:
+                sincronizar_campos_membros()
+            except Exception:
+                pass
+            else:
+                _SINCRONIZACAO_REALIZADA = True
         else:
             _SINCRONIZACAO_REALIZADA = True
     membros = db.collection(COLLECTION).stream()
