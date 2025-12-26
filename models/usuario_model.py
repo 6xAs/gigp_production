@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from typing import Tuple
 
 from utils.firebase_utils import init_firestore
+
+_FIRESTORE_TIMEOUT_S = 6
 
 
 def _is_active(status: object) -> bool:
@@ -19,15 +22,24 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
 
     email_normalizado = email.strip().lower()
     db = init_firestore()
-    doc_ref = db.collection("users").document(email_normalizado).get()
-    data = doc_ref.to_dict() if doc_ref.exists else None
 
-    if not data:
+    def _buscar_usuario():
+        doc_ref = db.collection("users").document(email_normalizado).get()
+        if doc_ref.exists:
+            return doc_ref.to_dict() or {}
         query = db.collection("users").where("email", "==", email_normalizado).limit(1).get()
         if query:
-            data = query[0].to_dict()
-        else:
-            return False, None
+            return query[0].to_dict() or {}
+        return None
+
+    try:
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            future = executor.submit(_buscar_usuario)
+            data = future.result(timeout=_FIRESTORE_TIMEOUT_S)
+    except TimeoutError:
+        return False, None
+    except Exception:
+        return False, None
 
     senha_db = data.get("senha")
     if senha_db is None or senha_db != senha:
