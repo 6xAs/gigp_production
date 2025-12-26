@@ -117,14 +117,14 @@ st.sidebar.markdown(
     """
     <style>
     div[data-testid="stSidebar"] button {
-        background: #1f8f4e;
+        background: #128f55;
         color: #ffffff;
-        border: 1px solid #1f8f4e;
+        border: 1px solid #128f55;
     }
     div[data-testid="stSidebar"] button:hover {
-        background: #18723e;
+        background: #0f7a49;
         color: #ffffff;
-        border: 1px solid #18723e;
+        border: 1px solid #0f7a49;
     }
     </style>
     """,
