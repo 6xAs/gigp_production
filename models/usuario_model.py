@@ -2,6 +2,9 @@ from __future__ import annotations
 
 from typing import Tuple
 
+from google.api_core.retry import Retry
+from google.api_core.exceptions import GoogleAPICallError, RetryError
+
 from utils.firebase_utils import init_firestore
 
 
@@ -19,11 +22,23 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
 
     email_normalizado = email.strip().lower()
     db = init_firestore()
-    doc_ref = db.collection("users").document(email_normalizado).get()
+    retry = Retry(deadline=4)
+    try:
+        doc_ref = db.collection("users").document(email_normalizado).get(retry=retry, timeout=4)
+    except (GoogleAPICallError, RetryError):
+        return False, "firestore_indisponivel"
     data = doc_ref.to_dict() if doc_ref.exists else None
 
     if not data:
-        query = db.collection("users").where("email", "==", email_normalizado).limit(1).get()
+        try:
+            query = (
+                db.collection("users")
+                .where("email", "==", email_normalizado)
+                .limit(1)
+                .get(retry=retry, timeout=4)
+            )
+        except (GoogleAPICallError, RetryError):
+            return False, "firestore_indisponivel"
         if query:
             data = query[0].to_dict()
         else:

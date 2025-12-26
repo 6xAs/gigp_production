@@ -35,7 +35,15 @@ def _render_login():
                     st.success("Login realizado com sucesso. Bem-vindo(a)!")
                     st.rerun()
                 else:
-                    st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
+                    if role == "firestore_indisponivel":
+                        st.error(
+                            "Não foi possível conectar ao Firestore agora. "
+                            "Tente novamente em alguns instantes."
+                        )
+                    else:
+                        st.error(
+                            "Email ou senha inválidos. Verifique as credenciais e tente novamente."
+                        )
 
 
 def _realizar_logout():
