@@ -20,9 +20,14 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
     email_normalizado = email.strip().lower()
     db = init_firestore()
     doc_ref = db.collection("users").document(email_normalizado).get()
-    if not doc_ref.exists:
-        return False, None
-    data = doc_ref.to_dict() or {}
+    data = doc_ref.to_dict() if doc_ref.exists else None
+
+    if not data:
+        query = db.collection("users").where("email", "==", email_normalizado).limit(1).get()
+        if query:
+            data = query[0].to_dict()
+        else:
+            return False, None
 
     senha_db = data.get("senha")
     if senha_db is None or senha_db != senha:
