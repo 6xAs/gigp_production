@@ -1,6 +1,6 @@
 import streamlit as st
 
-from models.usuario_model import autenticar_usuario
+from utils.firebase_utils import init_firestore
 from views.dashboards.view_home_dash import dash_home
 from views.membros.view_membros_dash import gestao_membros
 from views.membros.view_perfil_membro import view_perfil_membro
@@ -9,38 +9,37 @@ from views.equipes.view_equipes_dash import gestao_equipes
 from views.patrimonios.view_patrimonio_dash import gestao_patrimonios
 
 
-def _init_session():
-    if "autenticado" not in st.session_state:
-        st.session_state.autenticado = False
-    if "usuario" not in st.session_state:
-        st.session_state.usuario = None
-
-# Aqui se aplica a segurança de autenticação da aplicacão
-def _render_login():
-    col_esq, col_centro, col_dir = st.columns([1, 1, 1])
-    with col_centro:
-        st.markdown("<h2 style='text-align:center;'>🔐 Login</h2>", unsafe_allow_html=True)
-        with st.form("form_login"):
-            usuario = st.text_input("Usuário", placeholder="ex: gestor.gp")
-            senha = st.text_input("Senha", type="password", placeholder="••••••••")
-            entrar = st.form_submit_button("Entrar", use_container_width=True)
-            if entrar:
-                if autenticar_usuario(usuario, senha):
-                    st.session_state.autenticado = True
-                    st.session_state.usuario = usuario.strip()
-                    st.success("Login realizado com sucesso. Bem-vindo(a)!")
-                    st.rerun()
-                else:
-                    st.error("Usuário ou senha inválidos. Verifique as credenciais e tente novamente.")
-
-
-def _realizar_logout():
-    st.session_state.autenticado = False
-    st.session_state.usuario = None
+def _get_authenticated_email() -> str | None:
+    user = getattr(st, "experimental_user", None)
+    if not user:
+        return None
+    email = getattr(user, "email", None)
+    if email:
+        return email
     try:
-        st.query_params.clear()
+        return user.get("email")
     except Exception:
-        pass
+        return None
+
+
+def _authorize_email(email: str | None) -> tuple[bool, str | None]:
+    if not email:
+        return False, None
+    db = init_firestore()
+    doc_id = email.strip().lower()
+    snapshot = db.collection("users").document(doc_id).get()
+    if not snapshot.exists:
+        return False, None
+    data = snapshot.to_dict() or {}
+    status = data.get("status", "")
+    if isinstance(status, bool):
+        is_active = status
+    else:
+        status_text = str(status).strip().lower()
+        is_active = status_text in {"active", "ativo", "ativa", "enabled"}
+    if not is_active:
+        return False, None
+    return True, data.get("role")
 
 ###################### CONFIGURAÇÃO DA PÁGINA ######################
 st.set_page_config(
@@ -59,16 +58,31 @@ st.logo(
 )
 
 ###################### AUTENTICAÇÃO ######################
-_init_session()
-if not st.session_state.autenticado:
-    _render_login()
+email = _get_authenticated_email()
+autorizado, role = _authorize_email(email)
+if not autorizado:
+    st.markdown(
+        """
+        <div style="padding: 1.25rem; border: 1px solid #ffd1d1; border-radius: 12px; background: #fff5f5;">
+          <h2 style="margin: 0 0 .5rem 0;">⛔ Acesso negado</h2>
+          <p style="margin: 0 0 .75rem 0;">
+            Seu email não está autorizado para este app.
+          </p>
+          <p style="margin: 0; font-size: .95rem;">
+            Fale com o administrador e peça para liberar seu email no Streamlit Cloud.
+          </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     st.stop()
 
 ###################### TÍTULO ######################
 st.title("📋 Gestão Interna GP MECATRÔNICA")
 
 ###################### MENU LATERAL ######################
-st.sidebar.markdown(f"👋 Olá, **{st.session_state.usuario}**")
+role_label = f" ({role})" if role else ""
+st.sidebar.markdown(f"👋 Olá, **{email}**{role_label}")
 
 menu = st.sidebar.selectbox(
     "📋 Navegação",
@@ -102,7 +116,3 @@ except Exception as e:
     st.error(f"Ocorreu um erro ao carregar a página: {e}")
 
 st.sidebar.markdown("---")
-logout_clicked = st.sidebar.button("🔚 Encerrar sessão", use_container_width=True)
-if logout_clicked:
-    _realizar_logout()
-    st.rerun()
