@@ -1,4 +1,6 @@
 import streamlit as st
+
+from models.usuario_model import autenticar_usuario
 from views.dashboards.view_home_dash import dash_home
 from views.membros.view_membros_dash import gestao_membros
 from views.membros.view_perfil_membro import view_perfil_membro
@@ -7,23 +9,43 @@ from views.equipes.view_equipes_dash import gestao_equipes
 from views.patrimonios.view_patrimonio_dash import gestao_patrimonios
 
 
-def _get_authenticated_email() -> str | None:
-    user = getattr(st, "experimental_user", None)
-    if not user:
-        return None
-    email = getattr(user, "email", None)
-    if email:
-        return email
+def _init_session():
+    if "autenticado" not in st.session_state:
+        st.session_state.autenticado = False
+    if "usuario" not in st.session_state:
+        st.session_state.usuario = None
+    if "role" not in st.session_state:
+        st.session_state.role = None
+
+
+def _render_login():
+    col_esq, col_centro, col_dir = st.columns([1, 1, 1])
+    with col_centro:
+        st.markdown("<h2 style='text-align:center;'>🔐 Login</h2>", unsafe_allow_html=True)
+        with st.form("form_login"):
+            usuario = st.text_input("Email", placeholder="ex: gestor@empresa.com")
+            senha = st.text_input("Senha", type="password", placeholder="••••••••")
+            entrar = st.form_submit_button("Entrar", use_container_width=True)
+            if entrar:
+                ok, role = autenticar_usuario(usuario, senha)
+                if ok:
+                    st.session_state.autenticado = True
+                    st.session_state.usuario = usuario.strip()
+                    st.session_state.role = role
+                    st.success("Login realizado com sucesso. Bem-vindo(a)!")
+                    st.rerun()
+                else:
+                    st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
+
+
+def _realizar_logout():
+    st.session_state.autenticado = False
+    st.session_state.usuario = None
+    st.session_state.role = None
     try:
-        return user.get("email")
+        st.query_params.clear()
     except Exception:
-        return None
-
-
-def _authorize_email(email: str | None) -> tuple[bool, str | None]:
-    if not email:
-        return False, None
-    return True, None
+        pass
 
 ###################### CONFIGURAÇÃO DA PÁGINA ######################
 st.set_page_config(
@@ -42,21 +64,17 @@ st.logo(
 )
 
 ###################### AUTENTICAÇÃO ######################
-email = _get_authenticated_email()
-autorizado, role = _authorize_email(email)
-if not autorizado:
-    st.warning(
-        "Não foi possível identificar seu email via Streamlit Cloud. "
-        "Continuando sem validação de usuário."
-    )
+_init_session()
+if not st.session_state.autenticado:
+    _render_login()
+    st.stop()
 
 ###################### TÍTULO ######################
 st.title("📋 Gestão Interna GP MECATRÔNICA")
 
 ###################### MENU LATERAL ######################
-role_label = f" ({role})" if role else ""
-st.sidebar.markdown(f"👋 Olá, **{email}**{role_label}")
-st.sidebar.caption(f"Email detectado: {email}")
+role_label = f" ({st.session_state.role})" if st.session_state.role else ""
+st.sidebar.markdown(f"👋 Olá, **{st.session_state.usuario}**{role_label}")
 
 menu = st.sidebar.selectbox(
     "📋 Navegação",
@@ -70,6 +88,10 @@ menu = st.sidebar.selectbox(
     index=0,
 )
 st.sidebar.markdown("---")
+logout_clicked = st.sidebar.button("🔚 Encerrar sessão", use_container_width=True)
+if logout_clicked:
+    _realizar_logout()
+    st.rerun()
 
 ###################### ROTEAMENTO ######################
 try:
