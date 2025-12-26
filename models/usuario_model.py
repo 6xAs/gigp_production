@@ -21,9 +21,8 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
         return False, None
 
     email_normalizado = email.strip().lower()
-    db = init_firestore()
-
     def _buscar_usuario():
+        db = init_firestore()
         doc_ref = db.collection("users").document(email_normalizado).get()
         if doc_ref.exists:
             return doc_ref.to_dict() or {}
@@ -39,6 +38,9 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
     except TimeoutError:
         return False, None
     except Exception:
+        return False, None
+
+    if not data:
         return False, None
 
     senha_db = data.get("senha")
