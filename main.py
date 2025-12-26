@@ -45,6 +45,15 @@ st.logo(
 email = _get_authenticated_email()
 autorizado, role = _authorize_email(email)
 if not autorizado:
+    debug_user = getattr(st, "experimental_user", None)
+    debug_email = None
+    if debug_user:
+        debug_email = getattr(debug_user, "email", None)
+        if not debug_email:
+            try:
+                debug_email = debug_user.get("email")
+            except Exception:
+                debug_email = None
     st.markdown(
         """
         <div style="padding: 1.25rem; border: 1px solid #ffe4b5; border-radius: 12px; background: #fff8e8;">
@@ -60,6 +69,9 @@ if not autorizado:
         """,
         unsafe_allow_html=True,
     )
+    with st.expander("Diagnóstico rápido"):
+        st.write("experimental_user existe?", bool(debug_user))
+        st.write("email detectado:", debug_email)
     st.stop()
 
 ###################### TÍTULO ######################
