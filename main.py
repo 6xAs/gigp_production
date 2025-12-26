@@ -1,6 +1,3 @@
-import time
-from concurrent.futures import ThreadPoolExecutor
-
 import streamlit as st
 
 from models.usuario_model import autenticar_usuario
@@ -19,52 +16,9 @@ def _init_session():
         st.session_state.usuario = None
     if "role" not in st.session_state:
         st.session_state.role = None
-    if "login_future" not in st.session_state:
-        st.session_state.login_future = None
-    if "login_started_at" not in st.session_state:
-        st.session_state.login_started_at = None
-
-
-@st.cache_resource
-def _login_executor() -> ThreadPoolExecutor:
-    return ThreadPoolExecutor(max_workers=1)
 
 
 def _render_login():
-    future = st.session_state.login_future
-    if future is not None:
-        if future.done():
-            st.session_state.login_future = None
-            st.session_state.login_started_at = None
-            try:
-                ok, role = future.result()
-            except Exception:
-                st.error("Falha ao validar o login. Tente novamente.")
-                return
-            if ok:
-                st.session_state.autenticado = True
-                st.session_state.role = role
-                st.success("Login realizado com sucesso. Bem-vindo(a)!")
-                st.rerun()
-                return
-            st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
-        else:
-            started = st.session_state.login_started_at or time.time()
-            elapsed = time.time() - started
-            if elapsed > 8:
-                st.session_state.login_future = None
-                st.session_state.login_started_at = None
-                st.error("Não foi possível validar o login agora. Tente novamente.")
-            else:
-                if hasattr(st, "autorefresh"):
-                    st.autorefresh(interval=1000, key="login_wait")
-                st.info("Validando acesso...")
-                if st.button("Cancelar", use_container_width=True):
-                    st.session_state.login_future = None
-                    st.session_state.login_started_at = None
-            if st.session_state.login_future is not None:
-                return
-
     col_esq, col_centro, col_dir = st.columns([1, 1, 1])
     with col_centro:
         st.markdown("<h2 style='text-align:center;'>🔐 Login</h2>", unsafe_allow_html=True)
@@ -73,14 +27,15 @@ def _render_login():
             senha = st.text_input("Senha", type="password", placeholder="••••••••")
             entrar = st.form_submit_button("Entrar", use_container_width=True)
             if entrar:
-                st.session_state.usuario = usuario.strip()
-                st.session_state.login_started_at = time.time()
-                st.session_state.login_future = _login_executor().submit(
-                    autenticar_usuario,
-                    usuario,
-                    senha,
-                )
-                st.rerun()
+                ok, role = autenticar_usuario(usuario, senha)
+                if ok:
+                    st.session_state.autenticado = True
+                    st.session_state.usuario = usuario.strip()
+                    st.session_state.role = role
+                    st.success("Login realizado com sucesso. Bem-vindo(a)!")
+                    st.rerun()
+                else:
+                    st.error("Email ou senha inválidos. Verifique as credenciais e tente novamente.")
 
 
 def _realizar_logout():
