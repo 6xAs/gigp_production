@@ -16,10 +16,13 @@ build/
 *.spec
 
 
-# pasta screts 
-screts/
+# pasta secrets
+secrets/
 key.json
 key.toml
+
+# dados locais
+data/
 
 # Virtual environments
 env/
