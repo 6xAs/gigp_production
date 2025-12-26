@@ -1,0 +1,77 @@
+# Byte-compiled / cache / virtual envs
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.manifest
+*.spec
+
+
+# pasta screts 
+screts/
+key.json
+key.toml
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
+
+# Logs
+*.log
+
+# dotenv environment variables
+.env
+.env.*
+
+# Test output
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# PyInstaller
+*.spec
+
+# Local config
+*.local
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Pyright
+pyrightconfig.json

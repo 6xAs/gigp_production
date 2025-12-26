@@ -1,0 +1,411 @@
+CODIGO,ITEM,CATEGORIA,MARCA,MODELO,QUANTIDADE,PRECO_ESTIMADO,ESTADO,SITUACAO_USO,VIDA_UTIL,DATA_ATUALIZACAO
+1,ALICATE,Ferramenta,Tramontina,44000/108,3,83.48,Em bom estado,Em uso,5 a 10 anos ou mais.,2025-09-06
+2,ALICATE DE ABRAÇADEIRA PEQUENO,Ferramenta,Indefinido,Indefinido,3,45.00,Em ótimo estado,Em uso,4 anos,2025-09-06
+3,ALICATE DE ABRAÇADEIRA MÉDIO,Ferramenta,Vonder,Indefinido,8,48.00,Em ótimo estado,Em uso,4 anos,2025-09-06
+4,ALICATE DE ABRALÇADEIRA GRANDE,Ferramenta,Tramontina,Indefinido,2,48.00,Em ótimo estado,Em uso,4 anos,2025-09-06
+5,ALICATE AMPERÍMETRO,Ferramenta,Extech,380976-K,1,1933.18,Em bom estado,Em uso,5 a 10 anos,2025-09-06
+6,ALICATE CORTE DIAGONAL,Ferramenta,Jomarca,Alicate Corte Lateral Pvc 6 Polegadas Jomarca,4,36.48,Regular,Em uso,1 ano,2025-09-06
+7,ALICATE CORTE DIAGONAL,Ferramenta,Gedore red,Alicate de corte diagonal 165 mm (6.1/2″),1,44.95,Regular,Em uso,1 ano,2025-09-06
+8,ALICATE DE CLIPAGEM,Ferramenta,Indefinido,For cond 8p8c use,4,36.90,"Desgastado, mas funcional",Em uso,5 anos,2025-10-06
+9,ALICATE DE CLIPAGEM Multitoc,Ferramenta,Multitoc,Mual0208,1,125.50,Em bom estado,Em uso,5 a 10 anos,2025-10-06
+10,ALL-IN-ONE,Ferramenta,Apple,"iMac13,1",1,1700.00,Em bom estado,Em uso,Indeterminado,2025-10-06
+11,ARMÁRIO,Móvel,USE,Linha Ravena Light,6,700.00,Em bom estado,Em uso,10 anos,2025-09-04
+12,AR CONDICIONADO,Eletrodoméstico,Carrier,indefinido,1,8799.00,Em bom estado,Em uso,15 anos,2025-10-06
+13,CAFETEIRA,Eletrodoméstico,Britania,‎CP38 THERMO INOX,1,215.00,Em bom estado,Em uso,5 anos,2025-09-04
+14,CAFETEIRA,Eletrodoméstico,Black+Decker,CM15-BR,1,180.00,Em bom estado,Em uso,5 anos,2025-09-04
+15,CADEIRA,Móvel,Mpozenato,Hoteleira Empilhável,10,330.00,Em bom estado,Em uso,Indeterminado,2025-09-16
+16,CADEIRA GIRATORIA com rodinha,Móvel,Flexform,Cadeira Plus Onix Black,5,794.30,Em bom estado,Em uso,10 anos,2025-10-06
+17,CADEIRA GIRATORIA sem rodinha,Móvel,Flexform,Indefinido,8,725.90,Em bom estado,Em uso,10 anos,2025-09-06
+18,CADEIRA,Móvel,HOchair,Indefinido,2,787.30,Em bom estado,Em uso,10 anos,2025-09-06
+19,CADEIRA,Móvel,Flexform,Indefinido,6,456.90,Em bom estado,Em uso,10 anos,2025-11-17
+20,CAFETEIRA,Eletrodoméstico,3 Corações,S04 MODO,1,556.00,Em bom estado,Em uso,5 anos,2025-09-04
+21,CHAVE CANHÃO,Ferramenta,Western,40-JG4,2,20.00,Em bom estado,Em uso,20 anos,2025-10-06
+22,CHAVE DE FENDA pequena,Ferramenta,Tramontina,Indefinido,4,10.00,Em bom estado,Em uso,20 anos,2025-09-16
+23,CHAVE DE FENDA 1/8x3,Ferramenta,Tramontina,Indefinido,2,10.00,Em bom estado,Em uso,20 anos,2025-09-16
+24,CHAVE DE FENDA 3/16x4,Ferramenta,Tramontina,Indefinido,6,10.00,Em bom estado,Em uso,20 anos,2025-09-16
+25,CHAVE DE FENDA 1/8x3,Ferramenta,Tramontina,Indefinido,6,10.00,Em bom estado,Em uso,20 anos,2025-09-16
+26,CHAVE DE FENDA 1/4X6,Ferramenta,Tramontina,Indefinido,4,10.00,Em bom estado,Em uso,20 anos,2025-09-16
+27,CHAVE FIXA 9mm,Ferramenta,Drop Forded,Indefinido,1,20.00,Em ótimo estado,Em uso,30 anos,2025-09-06
+28,CHAVE FIXA 24mm,Ferramenta,Robust,Indefinido,1,20.00,Regular,Em uso,30 anos,2025-09-06
+29,DESKTOP,Computador,Indefinido,Indefinido,14,5799.00,Em ótimo estado,Em uso,7 anos,2025-09-06
+30,ESTILETE Gramp Line,Ferramenta De Corte,Gramp Line,9mm colorido,1,8.97,Regular,Em uso,1 ano,2025-09-06
+31,ESTILETE Futuro Escolar,Ferramenta De Corte,Futuro Escolar,Estilete Plástico 9mm Estreito,1,8.97,Regular,Em uso,1 ano,2025-09-06
+32,ESTILETE Brasfort,Ferramenta De Corte,Brasfort,8088,1,26.94,Em bom estado,Em uso,2 anos,2025-09-06
+33,ESTILETE vonder,Ferramenta De Corte,Vonder,ES 180,2,21.90,Em bom estado,Em uso,2 anos,2025-09-06
+34,CHAVE PHILIPS 1/4 x 2,Ferramenta,Tramontina,Indefinido,3,3.70,Em bom estado,Em uso,10 anos,2025-09-16
+35,CHAVE PHILIPS 1/4 x 3,Ferramenta,Tramontina,Indefinido,1,3.70,Em bom estado,Em uso,10 anos,2025-09-16
+36,CHAVE PHILIPS 1/4 x 4,Ferramenta,Tramontina,Indefinido,1,3.70,Em bom estado,Em uso,10 anos,2025-09-16
+37,ESTILETE Easy Office,Ferramenta De Corte,Easy Office,Indefinido,2,15.90,Em bom estado,Em uso,11 anos,2025-10-06
+38,ESPATULA,Ferramenta,Indefinido,Indefinido,1,9.99,Em ótimo estado,Em uso,10 anos,2025-09-06
+39,FILTRO DE LINHA,Acessório Elétrico,interNEED,Barra,9,27.85,Em bom estado,Em uso,Indeterminado,2025-10-07
+40,FONTE LAPTOP,Acessório De Informática,DELL,LA240PM190,4,124.61,Em bom estado,Em uso,5 a 10 anos,2025-10-07
+41,GELADEIRA,Eletrodoméstico,DAKO,REDK28,1,659.90,Em bom estado,Em uso,10 e 15 anos,2025-09-04
+42,GRAMPEADOR DE PRESSÃO,Ferramenta,Worker,Indefinido,3,100.00,"Desgastado, mas funcional",Em uso,10 anos,2025-11-11
+43,GRAMPEADOR,Material De Escritório,Easy Office,O-200,2,51.30,Em bom estado,Em uso,2 a 5 anos,2025-10-06
+44,HEADSET ‎Sony,Periférico De Áudio,Sony,MDR-ZX300,1,219.90,Danificado,Em uso,2 a 5 anos,2025-10-07
+45,HEADSET ‎Redragon,Periférico De Áudio,Redragon,Themis 2,1,144.41,"Desgastado, mas funcional",Em uso,2 a 5 anos,2025-10-07
+46,HEADSET ‎Multilaser,Periférico De Áudio,‎Multilaser,ph123,1,93.12,Danificado,Em uso,2 a 5 anos,2025-10-07
+47,HEADSET C3Tech,Periférico De Áudio,C3Tech,C3Tech Headset PH-320BK Voicer Comfort,1,124.61,Danificado,Em uso,2 a 5 anos,2025-10-07
+48,HEADSET Havit,Periférico De Áudio,Havit,HV-H2232d,5,107.60,Em ótimo estado,Em uso,2 a 5 anos,2025-10-06
+49,HEADSET GXTrust.,Periférico De Áudio,GXTrust.,GXT 416 Zirox,2,126.24,Em ótimo estado,Em uso,2 a 5 anos,2025-10-06
+50,IMPRESSORA,Periférico,Samsung,Proxpress M4070FR,1,1472.50,Em bom estado,Em uso,4 e 6 anos,2025-09-04
+51,IMPRESSORA 3D Ender 3,Periférico,Creality,Ender 3,1,2199.00,Em manutenção,Em conserto,Indeterminado,2025-09-04
+52,IMPRESSORA 3D Ender 5 Pro,Periférico,Creality,Ender 5 Pro,1,4548.90,Em manutenção,Em conserto,Indeterminado,2025-09-04
+53,LANTERNA,Equipamento De Iluminação,Ewtto,ET-F5471,2,30.00,Danificado,Em uso,2 a 3 anos,2025-10-06
+54,LAPTOP DELL G15 5520,Computador,DELL,G15 5520,3,4780.00,Em ótimo estado,Em uso,2 a 7 anos,2025-10-07
+55,LAPTOP DELL G15 5530,Computador,DELL,G15 5530,1,4799.00,Em ótimo estado,Em uso,2 a 7 anos,2025-10-07
+56,LUPA,Instrumento De Inspeção,Indefinido,Indefinido,2,194.00,Em bom estado,Em uso,10 anos,2025-09-06
+57,MARTELO DE BORRACHA,Ferramenta,Indefinido,Indefinido,2,20.24,Em bom estado,Em uso,3 a 5 anos,2025-10-06
+58,MARTELO UNHA,Ferramenta,Indefinido,Indefinido,3,20.99,Em bom estado,Em uso,5 anos,2025-09-06
+59,MONITOR LG,Eletroeletrônico,LG,27MP400 - B,8,1035.00,Em ótimo estado,Em uso,5 a 10 anos,2025-09-04
+60,MONITOR mnBox,Eletroeletrônico,mnBox,D-MN006,6,580.00,Em bom estado,Em uso,6 a 10 anos,2025-09-04
+61,MONITOR Dell,Eletroeletrônico,Dell,HP C ompaq 6000 Pro,5,910.00,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-09-04
+62,MONITOR HP,Eletroeletrônico,HP,HP OMNI 220,5,935.00,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-09-04
+63,MONITOR AOC,Eletroeletrônico,AOC,E2270Swn,1,823.38,Em ótimo estado,Em uso,5 a 10 anos,2025-09-04
+64,ALICATE DE INSERÇÃO,Ferramenta,Indefinido,6,5,25.90,Em ótimo estado,Em uso,5 anos,2025-09-06
+65,MOUSE Redragon,Periférico,Redragon,Redragon NOTHOSAUR (M606),6,129.90,Em ótimo estado,Em uso,2 a 5 anos,2025-09-08
+66,MOUSE GXTrust.,Periférico,GXTrust.,GXT 144 Rexx Ergonomic Vertical Gaming Mouse,3,240.00,Em ótimo estado,Em uso,2 a 5 anos,2025-09-09
+67,MOUSE GOtech,Periférico,GOtech,CMM-501,5,82.60,Em ótimo estado,Em uso,2 a 5 anos,2025-09-09
+68,NÍVEL,Instrumento De Medição,Brasfort,8271,2,19.99,Em bom estado,Em uso,Indeterminado,2025-10-07
+69,NOBREAK,Componente,SMS,Station II 1200Bi,1,750.00,Em bom estado,Em uso,2 a 5 anos,2025-10-06
+70,NOBREAK,Componente,SMS,Station II 1200Bi,3,750.00,Danificado,Em uso,2 a 5 anos,2025-10-06
+71,NOBREAK,Componente,SMS,New Station ST700S,1,800.00,Danificado,Em uso,2 a 5 anos,2025-10-16
+72,ÓCULOS DE PROTEÇÃO,Equipamento De Segurança,CARBOGRAFITE,IPS 1000,7,37.48,Em bom estado,Em uso,2 anos,2025-10-06
+73,RÉGUA TRIANGULAR,Equipamento De Medição,Waleu,Indefinido,1,5.99,Em bom estado,Em uso,5 anos,2025-09-16
+74,ESCALÍMETRO,Instrumento De Medição,Kit,Indefinido,5,15.00,Em bom estado,Em uso,5 anos,2025-09-16
+75,RÉGUA,Instrumento De Medição,Indefinido,Indefinido,10,10.00,"Desgastado, mas funcional",Em uso,2 anos,2025-09-16
+76,RÉGUA alumínio,Instrumento De Medição,waleu,Indefinido,2,15.79,Em bom estado,Em uso,5 anos,2025-09-16
+77,PISTOLA DE COLA QUENTE,Ferramenta,Jocar Office,4368,3,25.20,Regular,Em uso,3 a 3 anos,2025-09-11
+78,PROJETOR,Eletrônico,2,1835,1,1400.00,Em bom estado,Em uso,2 a 4 anos,2025-10-06
+79,ARCO DE SERRA Worker,Ferramenta,Worker,Indefinido,1,41.99,Em bom estado,Em uso,5 a 10 anos,2025-10-06
+80,ARCO DE SERRA lenox,Ferramenta,Lenox,Indefinido,2,68.64,Em bom estado,Em uso,5 a 10 anos,2025-10-06
+81,SERRA TICO-TICO,Ferramenta,BLACK+DECKER,Ks455,1,500.00,Em bom estado,Em uso,5 a 10 anos,2025-10-06
+82,SERRA TICO-TICO,Ferramenta,BLACK+DECKER,Ks501,1,350.00,Em bom estado,Em uso,5 a 10 anos,2025-10-06
+83,SERROTE,Ferramenta,Ramada,SERROTE CARPINTEIRO,2,30.00,Regular,Em uso,2 a 7 anos,2025-10-06
+84,SUPORTE L AEREO,Peça De Suporte,Indefinido,Indefinido,3,21.25,"Desgastado, mas funcional",Em uso,20 a 30 anos,2025-11-13
+85,FECHO DENTADO,Peça De Fixação,Indefinido,Indefinido,6,1.55,"Desgastado, mas funcional",Em uso,5 a 15 anos,2025-11-13
+86,cantoneira de fixação 3 furos,Peça De Fixação,Indefinido,Indefinido,59,4.90,"Desgastado, mas funcional",Em uso,15 a 25 anos,2025-11-13
+87,KIT DE porca de parafuso,Peça,Indefinido,Indefinido,41,0.30,"Desgastado, mas funcional",Em uso,20 a 30 anos,2025-11-13
+88,KIT DE PARAFUSO FIXER,Peça,Indefinido,Indefinido,2,42.43,Regular,Em uso,15 a 25 anos,2025-11-13
+89,KIT DE PARAFUSO SEXTAVADO,Peça,Indefinido,Indefinido,2,98.06,Regular,Em uso,20 a 30 anos,2025-11-13
+90,CONECTOR F PARA CABO COAXIAL,Peça,Indefinido,Indefinido,4,8.26,Regular,Em uso,10 a 20 anos,2025-11-13
+91,Cabo Usb Compatível Com Arduino Uno / Mega,Cabo,Genérico,USB A-B 2.0,18,5.76,Em bom estado,Em uso,3 a 7 anos,2025-11-13
+92,TECLADO T-Dagger 315,Periférico,T-Dagger,T-TGK315-BR,7,281.43,Em bom estado,Em uso,3 a 7 anos,2025-09-15
+93,TECLADO Teamwolf,Periférico,teamwolf,GK800P,4,194.99,Em bom estado,Em uso,4 a 7 anos,2025-10-07
+94,TECLADO T-Dagger 305,Periférico,T-Dagger,T-TGK305,3,219.99,Regular,Em uso,3 a 7 anos,2025-09-16
+95,TESOURA tramontina,Material De Escritório,Tramontina,MP510,1,9.00,Danificado,Em uso,5 a 10 anos,2025-09-06
+96,TESOURA brw,Material De Escritório,brw,TE2101,6,9.22,Em ótimo estado,Em uso,5 a 10 anos,2025-09-06
+97,FERRO DE SOLDA,Ferramenta,tramontina,Indefinido,8,39.99,Em bom estado,Em uso,4 anos,2025-09-06
+98,LÂMINA DE SERRA,Ferramenta,Indefinido,Indefinido,6,19.99,"Desgastado, mas funcional",Em uso,3 anos,2025-10-06
+99,SUGADOR DE SOLDA,Ferramenta,Indefinido,Indefinido,5,74.00,Danificado,Em uso,2 anos,2025-09-06
+100,ROLO ESTANHO,Material,Kaina,B-1,1,70.20,Em ótimo estado,Em uso,1 ano,2025-09-06
+101,CHAVE INGLESA AJUSTÁVEL 150mm,Ferramenta,Forged steel,Indefinido,3,57.13,Em ótimo estado,Em uso,5 a 10 anos,2025-11-13
+102,CHAVE INGLESA AJUSTÁVEL 250mm,Ferramenta,Sata,Indefinido,1,57.13,Em ótimo estado,Em uso,10 anos,2025-11-13
+103,CHAVE COMBINADA 8,Ferramenta,Drop Forged,Indefinido,7,29.90,Em ótimo estado,Em uso,10 a 20 anos,2025-11-13
+104,CHAVE COMBINADA 19,Ferramenta,Robust,Indefinido,1,59.90,"Desgastado, mas funcional",Em uso,10 anos,2025-11-13
+105,PREGOS(sacos) 1kg,Ferramenta,Gerdau,Indefinido,2,247.58,Em bom estado,Em uso,20 anos,2025-11-13
+106,SILICONE ACÉTICO TRANSPARENTE,Supercola,Tek Bond,Indefinido,2,65.66,Em ótimo estado,Em uso,10 a 20 anos,2025-11-13
+107,BOMBA,Equipamento Mecânico,Joape,Indefinido,1,439.00,Regular,Em uso,10 a 15 anos,2025-11-13
+108,CONECTOR USB TIPO A,Cabo,Indefinido,Indefinido,5,14.15,Em bom estado,Em uso,10 anos,2025-11-14
+109,BARRA PARAFUSO SEM CABEÇA (BARRA ROSCADA),Ferramenta,Indefinido,Indefinido,2,16.86,Em bom estado,Em uso,15 anos,2025-11-14
+110,CHAVE DE FENDA DE RELOJOEIRO,Ferramenta,Indefinido,Indefinido,15,25.61,Regular,Em uso,3 a 5 anos,2025-11-14
+111,CHAVE ALLEN,Ferramenta,Indefinido,Indefinido,10,27.30,Regular,Em uso,10 a 20 anos,2025-11-14
+112,KIT DE ARRUELA CHAPEADOR,Ferramenta,Indefinido,Indefinido,1,70.98,Regular,Em uso,20 anos,2025-11-14
+113,KIT DE PARAFUSO GANCHO,Ferramenta,Indefinido,Indefinido,1,37.69,Regular,Em uso,20 anos,2025-11-14
+114,KIT DE BROCAS,Ferramenta,Indefinido,Indefinido,3,86.56,Em bom estado,Em uso,10 anos,2025-11-14
+115,PARAFUSADEIRA,Ferramenta,Makita,Indefinido,1,589.90,Regular,Em uso,5 a 10 anos,2025-11-17
+116,MALHA FITA DESUGADOR,Ferramenta Para Dessoldagem,Indefinido,Indefinido,1,15.00,Em ótimo estado,Em uso,6 meses,2025-09-06
+117,FILAMENTO para impressora 3d,Material De Impressão,3DFila,PLA HT,13,109.48,Em bom estado,Em uso,1 a 3 anos,2025-11-10
+118,WEBCAM,Periférico,Leadership,Night Vision,9,60.00,Em ótimo estado,Lacrado,5 anos,2025-10-08
+119,CADEADO PARA NOTEBOOK,Ferramenta,New link,CA301,2,20.00,Em ótimo estado,Novo,Indeterminado,2025-10-08
+120,ABRAÇADEIRA DE VELCRO,Ferramenta,Speedlan,Rolo 5M AZ,2,42.00,Em ótimo estado,Lacrado,Indeterminado,2025-10-08
+121,TERMÔMETRO,Instrumento De Medição,Waterproof,Indeterminado,2,79.00,Em ótimo estado,Lacrado,Indeterminado,2025-10-08
+122,TESTADOR DE CABO DE REDE Multitoc,Ferramenta,Multitoc,MT200,2,125.00,Em bom estado,Em uso,Indeterminado,2025-10-08
+123,TESTADOR DE CABO DE REDE Deley con,Ferramenta,Deley con,MK4226,1,76.00,Em ótimo estado,Em uso,3 anos,2025-10-08
+124,SUPORTE PARA FERRO DE SOLDA,Ferramenta,Indeterminado,Indefinido,1,179.00,Em ótimo estado,Lacrado,10 anos,2025-10-08
+125,ISCA INSETCIDA,Ferramenta,Bayer bayer,K-Othrine,1,20.00,Em ótimo estado,Em uso,Indeterminado,2025-10-08
+126,ESQUADRO,Instrumento De Medição,Trident,60 graus 32 cm,1,32.00,Em ótimo estado,Lacrado,Indeterminado,2025-10-08
+127,SACO DE SILICONE,Utensílio,Indefinido,1 Litro,1,22.00,Em ótimo estado,Em uso,Indeterminado,2025-10-08
+128,CABO SATA,Cabo,CoMATAC,26AWG,1,20.00,Em ótimo estado,Em uso,Indeterminado,2025-10-08
+129,CABO HDMI,Cabo,PIX,HDMI,3,30.00,Em ótimo estado,Em uso,Indeterminado,2025-10-08
+130,CABO COAXIAL,Cabo,Thermax,YEHF-200,1,27.00,Em ótimo estado,Em uso,Indeterminado,2025-10-08
+131,PLACA AC97 CODEC,Periférico,Realtek,ENLGA-1320,2,80.00,Em bom estado,Em uso,Indeterminado,2025-10-08
+132,CABO DE EXTENSÃO,Cabo,Longwell,LS-7A,1,100.00,Em ótimo estado,Em uso,1 a 5 anos,2025-10-08
+133,PRANCHETAS,Material De Escritório,Indefinido,Indefinido,24,24.00,Em bom estado,Em uso,Indeterminado,2025-10-22
+134,BATERIA 12v 5ah,Dispositivo De Alimentação,CSB,csb hr 1221,5,275.00,Em bom estado,Em uso,5 anos,2025-10-07
+135,BATERIA 12v 5ah,Dispositivo De Alimentação,Multitoc,MUBA0001,3,139.41,Em bom estado,Em uso,5 anos,2025-10-08
+136,Kit de ferramenta,Ferramenta,Indefinido,Indefinido,5,540.00,Regular,Em uso,3 a 5 anos,2025-10-08
+137,CONECTOR BORNE KRE 2 VIAS VERDE 250V/300V 20A/16A,Componentes Eletrônicos,WANJIE,WJ128,199,35.00,Regular,Em uso,3 a 5 anos,2025-10-08
+138,CONECTOR BORNE AZUL 300V 10A,Componentes Eletrônicos,XINKE,XK301,5,24.96,"Desgastado, mas funcional",Em uso,5 anos,2025-10-09
+139,CONECTOR BORNE KRE 2 VIAS AZUL 250V 16A,Componentes Eletrônicos,WANJIE,WJ300,11,35.83,Regular,Em uso,5 anos,2025-10-09
+140,CONECTOR BORNE KRE 3 VIAS VERDE 250V 20A/ 300V 16A,Componentes Eletrônicos,WANJIE,WJ128,251,10.88,Regular,Em uso,5 anos,2025-10-09
+141,CONECTOR BORNE KRE 2 VIAS AZUL 12A 300V,Componentes Eletrônicos,Indefinido,KF301,143,22.88,Regular,Em uso,5 anos,2025-10-09
+142,CONECTOR BORNE KRE 3 VIAS AZUL 300V 16A,Componentes Eletrônicos,WANJIE,WJ301,34,15.80,Regular,Em uso,5 anos,2025-10-09
+143,JUMPER MACHO-MACHO,Acessório De Prototipagem,Indefinido,Indefinido,147,11.85,Regular,Em uso,2 a 4 anos,2025-10-13
+144,JUMPER FEMEA-FEMEA,Acessório De Prototipagem,Indefinido,Indefinido,300,11.90,Regular,Em uso,2 a 4 anos,2025-10-13
+145,JUMPER MACHO-FEMEA,Acessório De Prototipagem,Indefinido,Indefinido,139,11.90,Regular,Em uso,2 a 4 anos,2025-10-13
+146,ARDUINO UNO,Placa De Desenvolvimento,Arduino,Uno,6,50.43,Em bom estado,Em uso,3 anos,2025-10-13
+147,ARDUINO MEGA,Placa De Desenvolvimento,Arduino,Mega 2560,2,49.99,Em bom estado,Em uso,3 anos,2025-10-13
+148,ARDUINO LEONARDO,Placa De Desenvolvimento,Arduino,Leonardo R3,1,285.93,Em bom estado,Em uso,3 anos,2025-10-13
+149,Adaptador de alimentação AC/DC entrada USB-B 12V 1A,Dispositivo De Alimentação,Indefinido,530,5,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+150,"ADAPTADOR DE ALIMENTAÇÃO 12V 0,5A",Dispositivo De Alimentação,Vision,305034,1,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+151,"ADAPTADOR DE ALIMENTAÇÃO AC/DC 19V 2,37A",Dispositivo De Alimentação,Indefinido,Indefinido,1,25.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+152,ADAPTADOR DE ALIMENTAÇÃO AC/DC 12V 1A,Dispositivo De Alimentação,Indefinido,Indefinido,4,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+153,"ADAPTADOR DE ALIMENTAÇÃO AC/DC 7,5V 300mA",Dispositivo De Alimentação,Intelbras,FC03,1,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+154,ADAPTADOR DE ALIMENTAÇÃO AC/DC 12V 300mA,Dispositivo De Alimentação,Indefinido,Indefinido,1,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+155,ADAPTADOR DE ALIMENTAÇÃO AC/DC 9V 1A,Dispositivo De Alimentação,Indefinido,LYW-0910,2,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+156,ADAPTADOR DE ALIMENTAÇÃO AC/DC 12V 2A,Dispositivo De Alimentação,Indefinido,CCY-1220,3,20.00,"Desgastado, mas funcional",Em uso,5 anos,2025-10-13
+157,MÓDULO Xbee series 2,Módulo De Comunicação,XBee,XBEE2,3,184.72,Em bom estado,Em uso,3 anos,2025-10-13
+158,DUAL MOTOR SHIELD,Placa De Controle De Motores,Arduino,Motor Shield Rev3,4,110.00,Danificado,Em uso,3 anos,2025-10-16
+159,MOTOR CONTROL SHIELD FOR ARDUINO,Módulo Eletrônico,DK Eletronics,Indefinido,2,30.58,Regular,Em uso,3 anos,2025-10-16
+160,SHIELD,Módulo Eletrônico,XBee,Indefinido,8,3000.00,Em bom estado,Em uso,2 anos,2025-10-13
+161,CRUZETA PARA SERVO,Peça,Indefinido,Indefinido,55,53.89,Em bom estado,Em uso,2 anos,2025-11-17
+162,MICROCONTROLADOR ATmega328P,Componente Eletrônico,ATMEL,ATmega328P,5,79.99,"Desgastado, mas funcional",Em uso,3 anos,2025-10-16
+163,CARREGADOR Plugue de barril (barrel connector),Eletrônico,Indefinido,Indefinido,4,52.22,Em bom estado,Em uso,5 anos,2025-10-16
+164,CIRCUITO INTEGRADO 7805,Componente Eletrônico,STMicroeletronics,7805,3,79.00,"Desgastado, mas funcional",Em uso,15 a 30 anos,2025-10-16
+165,CIRCUITO INTEGRADO CD4073BE,Componente Eletrônico,Texas Instruments,CD4073BE,13,12.00,Regular,Em uso,15 a 30 anos,2025-10-16
+166,SOQUETE PARA CIRCUITO INTEGRADO,Componente Eletrônico,Indefinido,Indefinido,6,43.90,Regular,Em uso,15 a 30 anos,2025-10-16
+167,CIRCUITO INTEGRADO 3A2065,Componente Eletrônico,ChipSCE,3A2065,2,12.99,Regular,Em uso,20 a 30 anos,2025-10-16
+168,CIRCUITO INTEGRADO L298N,Componente Eletrônico,STMicroelectronics,L298N,6,12.99,Regular,Em uso,20 a 30 anos,2025-10-16
+169,PROTOBOARD GRANDE,Placa De Prototipagem Eletrônica,Indefinido,Indefinido,10,17.89,Regular,Em uso,10 anos,2025-10-13
+170,PROTOBOARD MÉDIA,Placa De Prototipagem Eletrônica,Indefinido,Indefinido,9,17.89,Em bom estado,Em uso,10 anos,2025-10-13
+171,PROTOBOARD PEQUENA,Placa De Prototipagem Eletrônica,Indefinido,Indefinido,17,17.89,Em bom estado,Em uso,10 anos,2025-10-13
+172,PLACA DE FENOLITE,Material De Prototipagem,Indefinido,Indefinido,2,70.00,Em bom estado,Em uso,15 anos,2025-10-16
+173,TRANSISTOR,Componente Eletrônico,STMicroelectronics,Indefinido,621,73.89,Regular,Em uso,5 anos,2025-10-14
+174,CONECTOR PARA CABO,Componente Eletrônico,EXCON,Indefinido,619,15.99,Em ótimo estado,Em uso,15 anos,2025-10-14
+175,LED RGB PARA ARDUINO,Componente Eletrônico,Indefinido,Indefinido,4,3.99,Danificado,Em manutenção,6 meses,2025-10-16
+176,LED PARA ARDUINO,Componente Eletrônico,Indefinido,Indefinido,114,13.98,Regular,Em uso,6 meses,2025-10-16
+177,MÓDULO VOTÍMETRO DE SETE SEGMENTOS COM 3 DÍGITOS,Componente Eletrônico,Indefinido,DSN-DVM-368,2,8.50,Em bom estado,Em uso,6 meses,2025-10-16
+178,MÓDULO VOTÍMETRO DE SETE SEGMENTOS COM 1 DÍGITOS,Componente Eletrônico,Indefinido,Indefinido,2,4.06,Em bom estado,Em uso,6 meses,2025-10-16
+179,DISPLAY DE 10 SEGMENTOS,Componente Eletrônico,Indefinido,FYX-B10R,6,10.00,Em ótimo estado,Lacrado,1 ano,2025-10-16
+180,MATRIZ DE LED 8X8,Componente Eletrônico,Indefinido,Indefinido,1,30.00,Em bom estado,Em uso,7 anos ou mais,2025-11-17
+181,WATER SENSOR,Componente Eletrônico,Indefinido,v1.1,1,10.00,Em bom estado,Em uso,1 ano,2025-10-14
+182,RESISTOR 10K,Componente Eletrônico,Indefinido,Indefinido,111,0.50,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+183,RESISTOR 1K,Componente Eletrônico,Indefinido,Indefinido,246,0.49,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+184,RESISTOR 1000K,Componente Eletrônico,Indefinido,Indefinido,39,0.90,"Desgastado, mas funcional",Em uso,20 anos ou mais,2025-10-14
+185,RESISTOR 100K,Componente Eletrônico,Indefinido,Indefinido,68,0.70,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+186,RESISTOR 200Ω,Componente Eletrônico,Indefinido,Indefinido,200,0.40,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+187,RESISTOR 150Ω,Componente Eletrônico,Indefinido,Indefinido,190,0.35,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+188,RESISTOR 100Ω,Componente Eletrônico,Indefinido,Indefinido,210,0.30,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+189,RESISTOR 270Ω,Componente Eletrônico,Indefinido,Indefinido,364,0.47,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+190,RESISTOR 470K,Componente Eletrônico,Indefinido,Indefinido,300,0.80,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+191,RESISTOR330K,Componente Eletrônico,Indefinido,Indefinido,93,0.75,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+192,"RESISTOR 4,7KΩ",Componente Eletrônico,Indefinido,Indefinido,142,0.70,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+193,RESISTOR 150Ω,Componente Eletrônico,Indefinido,Indefinido,143,0.35,Em ótimo estado,Lacrado,20 anos ou mais,2025-10-14
+194,RESISTOR 220Ω,Componente Eletrônico,Indefinido,Indefinido,230,0.45,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+195,RESISTOR 2KΩ,Componente Eletrônico,Indefinido,Indefinido,106,0.50,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+196,"RESISTOR 2,3KΩ",Componente Eletrônico,Indefinido,Indefinido,127,0.60,Em bom estado,Em uso,20 anos ou mais,2025-10-14
+197,INTERRUPTOR DE BOTÃO DE PRESSÃO,Componente Eletromecânico,Indefinido,Indefinido,1,25.00,"Desgastado, mas funcional",Em uso,2 a 10 anos,2025-10-20
+198,MÓDULO RECEPTOR DE GPS,Componente Eletrônico,Indefinido,EM-406A,1,23.00,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-10-20
+199,MICRO SERVO,Componente Eletromecânico,Tower Pro,sg90,2,20.49,Regular,Em uso,1 ano,2025-10-20
+200,PLACA DE CARREGADOR DE BATERIA,Módulo Eletrônico,Indefinido,Indefinido,3,79.20,Em bom estado,Em uso,2 a 3 anos,2025-11-17
+201,CONVERSOR DE NÍVEL LÓGICO,Módulo Eletrônico,Indefinido,Indefinido,5,36.41,Em bom estado,Em uso,2 anos,2025-10-20
+202,MÓDULO ACELEROMETRO DE SAÍDA DE 3 EIXOS,Módulo Eletrônico,Indefinido,Indefinido,1,40.00,Em ótimo estado,Em uso,10 anos,2025-10-20
+203,MÓDULO ADAPTADOR 12C PARA DISPLAY LCD,Módulo Eletrônico,Indefinido,Indefinido,1,69.36,Em bom estado,Em uso,3 anos,2025-10-20
+204,MÓDULO DE RADIOFREQUÊNCIA,Módulo Eletrônico,UCEC,xy-mk-5v,1,749.64,Regular,Em uso,2 anos,2025-10-20
+205,SENSOR VELOCIDADE MÓDULO ENCONDER ACOPLADOR ÓPTICO,Sensor,Indefinido,Indefinido,1,22.00,Regular,Em uso,2 anos,2025-10-20
+206,MÓDULO WI-FI,Módulo Eletrônico,Indefinido,‎ESP8266,10,375.00,Em bom estado,Em uso,3 a 5 anos,2025-10-21
+207,MÓDULO CONVERSOR DE USB PARA SERIAL,Componente Eletrônico,OEM,FTDI FT232RL,4,161.72,Em bom estado,Em uso,3 a 5 anos,2025-10-20
+208,CABO USB TIPO MICRO-USB,Acessório Eletrônico,Indefinido,Indefinido,3,39.99,Em ótimo estado,Em uso,2 a 5 anos,2025-10-23
+209,MOTOR DE CORRENTE CONTÍNUA,Motores Elétricos,Tower,RF300CA,18,68.45,"Desgastado, mas funcional",Em uso,5 a 15 anos,2025-10-23
+210,DRIVE PARA MOTOR DE PASSO,Componente Eletrônico,Indefinido,ZC-A0591,1,439.76,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-10-20
+211,TRANSFORMADOR TRAFO,Componente Eletromecânico,Indefinido,110V/ 9V 350mA,1,41.74,"Desgastado, mas funcional",Em uso,25 anos,2025-10-23
+212,CONECTOR DE ALIMENTAÇÃO FÊMEA,Conector Elétrico,Indefinido,Indefinido,18,2.21,Em bom estado,Em uso,3 anos,2025-10-21
+213,CONECTOR DE ALIMENTAÇÃO MACHO,Conector Elétrico,Indefinido,Indefinido,17,2.21,Em bom estado,Em uso,3 anos,2025-10-21
+214,CONECTOR DEANS T,Conector Elétrico,Indefinido,Indefinido,9,16.71,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-10-21
+215,ADAPTADOR DE BATERIAS,Componente Eletrônico,hexTronik,XT60,9,36.06,"Desgastado, mas funcional",Em uso,3 a 10 anos,2025-10-21
+216,BARRA DE PINO DE CONEXÃO MACHO,Acessório De Montagem,Indefinido,Indefinido,540,10.00,Regular,Em uso,10 a 20 anos,2025-10-22
+217,BARRA DE PINO DE CONEXÃO FÊMEA,Acessório De Montagem,Indefinido,Indefinido,25,10.00,Regular,Em uso,10 a 20 anos,2025-10-22
+218,MICRO MOTOR DC,Motor,usinainfo,Indefinido,6,31.62,Regular,Em uso,6 meses,2025-10-22
+219,KIT DE SENSORES PARA ARDUINO,Kit De Informática,Indefinido,Indefinido,1,253.87,Em bom estado,Em uso,5 a 10 anos,2025-10-16
+220,MÓDULO DE JOYSTICK,Módulo Eletrônico,Indefinido,Indefinido,2,24.90,Em bom estado,Em uso,10 a 20 anos,2025-10-16
+221,MÓDULO DE RELÉ,Módulo Eletrônico,Indefinido,Indefinido,1,13.49,Em bom estado,Em uso,10 anos,2025-10-16
+222,SENSOR DE SOM GRANDE,Módulo Eletrônico,Indefinido,Indefinido,2,15.46,Em bom estado,Em uso,5 a 10 anos,2025-10-16
+223,SENSOR DE SOM PEQUENO,Módulo Eletrônico,Indefinido,Indefinido,2,11.05,Em bom estado,Em uso,10 a 20 anos,2025-10-16
+224,SENSOR DE TRACKING,Módulo Eletrônico,Indefinido,Indefinido,4,17.54,Em bom estado,Em uso,4 a 7 anos,2025-10-16
+225,SENSOR DE EVITAÇÃO DE OBSTÁCULO,Módulo Eletrônico,Indefinido,Indefinido,1,31.96,Em bom estado,Em uso,5 anos,2025-10-16
+226,SENSOR DE CHAMA/FOGO,Módulo Eletrônico,Indefinido,Indefinido,4,19.30,Em bom estado,Em uso,6 meses,2025-10-16
+227,SENSOR LINEAR HALL,Módulo Eletrônico,Indefinido,Indefinido,1,6.19,Em bom estado,Em uso,10 anos,2025-10-16
+228,SENSOR DE TOQUE,Módulo Eletrônico,Indefinido,Indefinido,2,11.64,Em bom estado,Em uso,15 anos,2025-10-16
+229,MÓDULO DE SENSOR DIGITAL DE TEMPERATURA,Módulo Eletrônico,Indefinido,Indefinido,2,16.50,Em bom estado,Em uso,10 anos,2025-10-16
+230,SENSOR DE BUZZER,Módulo Eletrônico,Indefinido,Indefinido,1,13.87,Em bom estado,Em uso,5 anos,2025-10-16
+231,SENSOR DE BUZZER PASSIVO,Módulo Eletrônico,Indefinido,Indefinido,1,13.87,Em bom estado,Em uso,10 anos,2025-10-16
+232,MÓDULO INTERRUPTOR MAGNÉTICO REED SWITCH,Módulo Eletrônico,Indefinido,Indefinido,3,19.09,Em bom estado,Em uso,10 anos,2025-10-16
+233,SENSOR REED SWICTH,Módulo Eletrônico,Indefinido,Indefinido,1,13.99,Em bom estado,Em uso,10 anos,2025-10-16
+234,SENSOR TWO-COLOR,Módulo Eletrônico,Indefinido,Indefinido,2,3700.00,Em bom estado,Em uso,6 meses,2025-10-16
+235,SENSOR TWO-COLOR LED,Módulo Eletrônico,Indefinido,Indefinido,1,239.00,Em bom estado,Em uso,6 meses,2025-10-16
+236,SENSOR SMD RGB,Módulo Eletrônico,Indefinido,Indefinido,2,75.00,Em bom estado,Em uso,6 meses,2025-10-16
+237,SENSOR DE LED RGB,Módulo Eletrônico,Indefinido,Indefinido,4,78.99,Em bom estado,Em uso,1 ano,2025-10-16
+238,SENSOR HEARTBRAT,Módulo Eletrônico,Indefinido,Indefinido,2,169.76,Em bom estado,Em uso,1 ano,2025-10-16
+239,SENSOR 7 COLOR FLASH,Módulo Eletrônico,Indefinido,Indefinido,1,25.76,Em bom estado,Em uso,1 ano,2025-10-16
+240,SENSOR LASER EMIT,Módulo Eletrônico,Indefinido,Indefinido,2,55.54,Em bom estado,Em uso,1 ano,2025-10-16
+241,SENSOR BUTTON,Módulo Eletrônico,Indefinido,Indefinido,4,25.78,Em bom estado,Em uso,1 ano,2025-10-16
+242,SENSOR SHOCK,Módulo Eletrônico,Indefinido,Indefinido,2,119.99,Em bom estado,Em uso,5 a 10 anos,2025-10-16
+243,SENSOR ROTARY ENCODERS,Módulo Eletrônico,Indefinido,Indefinido,6,78.90,Em bom estado,Em uso,20 anos,2025-10-16
+244,SENSOR LIGHT CUP,Módulo Eletrônico,Indefinido,Indefinido,6,39.37,Em bom estado,Em uso,3 a 5 anos,2025-10-16
+245,SENSOR TILT SWITCH,Módulo Eletrônico,Indefinido,Indefinido,1,10.45,Em bom estado,Em uso,1 a 5 anos,2025-10-16
+246,SENSOR BALL SWITCH,Módulo Eletrônico,Indefinido,Indefinido,2,12.65,Em bom estado,Em uso,1 a 5 anos,2025-10-16
+247,SENSOR TEMP AND HUMLIDITY,Módulo Eletrônico,Indefinido,Indefinido,3,146.78,Em bom estado,Em uso,2 a 10 anos,2025-10-16
+248,SENSOR ANALOG HALL,Módulo Eletrônico,Indefinido,Indefinido,1,285.65,Em bom estado,Em uso,10 anos,2025-10-16
+249,SENSOR HALL MAGNETIC,Módulo Eletrônico,Indefinido,Indefinido,3,950.85,Em bom estado,Em uso,10 anos,2025-10-16
+250,SENSOR TEMP,Módulo Eletrônico,Indefinido,Indefinido,2,250.87,Em ótimo estado,Embalado,2 a 10 anos,2025-10-16
+251,SENSOR ANALOG TEMP,Módulo Eletrônico,Indefinido,Indefinido,2,285.99,Em bom estado,Em uso,10 anos,2025-10-16
+252,SENSOR IR EMISSION,Módulo Eletrônico,Indefinido,Indefinido,1,40.65,Em bom estado,Em uso,8 anos,2025-10-16
+253,SENSOR IR RECEIVER,Módulo Eletrônico,Indefinido,Indefinido,1,47.93,Em bom estado,Em uso,8 anos,2025-10-16
+254,SENSOR LIGHT MODULE,Módulo Eletrônico,Indefinido,Indefinido,1,108.67,Em bom estado,Em uso,10 anos,2025-10-16
+255,SENSOR TAB MODULE,Módulo Eletrônico,Indefinido,Indefinido,2,25.76,Em bom estado,Em uso,5 anos,2025-10-16
+256,PUSH BUTTOM,Componente Eletrônico,Indefinido,Indefinido,41,46.00,Em bom estado,Em uso,3 anos,2025-10-21
+257,RELÉ,Componente Eletromecânico,Song Chuan,833h-1c-c,3,78.99,Regular,Em uso,3 anos,2025-11-17
+258,MÓDULO RELÉ,Dispositivo De Controle Eletrônico,Songle,Indefinido,3,58.78,Regular,Em uso,3 anos,2025-10-20
+259,MÓDULO TRANSCEPTOR COM ANTENA,Módulo Eletrônico,Indefinido,XL1278-SMT,2,95.00,Em ótimo estado,Embalado,5 anos,2025-10-20
+260,MÓDULO TRANSCEPTOR WIRELESS,Módulo Eletrônico,SBC Solutions,Nrf24l01,2,42.54,Em bom estado,Em uso,10 anos,2025-10-20
+261,MÓDULO LEITOR DE CARTÃO SD,Módulo Eletrônico,Indefinido,Indefinido,1,25.34,"Desgastado, mas funcional",Em uso,5 anos,2025-10-20
+262,SENSOR RTD,Componente Passivo,Indefinido,Indefinido,1,1083.45,Em bom estado,Em uso,3 a 10 anos,2025-10-24
+263,MÓDULO SENSOR DE TEMPERATURA,Módulo Eletrônico,Indefinido,MAX6675K,1,259.99,Em bom estado,Em uso,3 a 10 anos,2025-10-20
+264,BUZZER DE ALARME DE BAIXA VOLTAGEM,Módulo Eletrônico,Indefinido,Indefinido,1,45.65,Em ótimo estado,Embalado,2 a 5 anos,2025-10-20
+265,SENSOR DE NÍVEL DA ÁGUA,Módulo Eletrônico,Indefinido,Indefinido,2,452.00,Regular,Em uso,3 a 10 anos,2025-10-24
+266,SENSOR DE GÁS,Módulo Eletrônico,FILIPEFLOP,MQ-3,1,245.65,Em ótimo estado,Embalado,5 anos,2025-10-20
+267,MÓDULO SENSOR ULTRAVIOLETA,Módulo Eletrônico,FILIPEFLOP,UVM-30A,1,74.00,Em ótimo estado,Embalado,5 a 10 anos,2025-10-20
+268,MÓDULO SENSOR DE VIBRAÇÃO,Módulo Eletrônico,FILIPEFLOP,SW-420,5,43.50,Em ótimo estado,Embalado,5 anos,2025-10-20
+269,MÓDULO SENSOR DE CORRENTE,Módulo Eletrônico,Mamute,ACS-712,2,74.90,Em ótimo estado,Embalado,3 a 10 anos,2025-10-20
+270,MÓDULO SENSOR DE INCLINÇÃO,Módulo Eletrônico,Indefinido,SW520D,1,50.45,Em bom estado,Em uso,3 a 10 anos,2025-10-16
+271,MÓDULO DE SENSOR DE UMIDADE DO SOLO,Módulo Eletrônico,GBK Robotics,p23,1,89.99,Em bom estado,Em uso,1 a 5 anos,2025-10-23
+272,MÓDULO DE SENSOR DO SOLO,Módulo Eletrônico,Indefinido,Indefinido,1,104.23,"Desgastado, mas funcional",Em uso,1 a 5 anos,2025-10-16
+273,MÓDULO DE TRANSMISSOR DE RADIOFREQUÊNCIA KST-TX01,Módulo Eletrônico,CY,KST-TX01,1,23.45,"Desgastado, mas funcional",Em uso,5 a 10 anos,2025-10-16
+274,SENSOR DE DISTÂNCIA,Sensores De Medição,Indefinido,Indefinido,1,25.00,Em ótimo estado,Embalado,5 a 10 anos,2025-10-21
+275,SENSOR DE DISTÂNCIA POR INFRAVERMELHO,Sensores De Medição,SHARP,2Y0A02 F 5X,5,65.00,Danificado,Em uso,5 anos,2025-10-16
+276,DISSIPADOR DE CALOR DE COBRE PURO,Componente Eletrônico,Indefinido,12 x 13 x 5 mm,1,50.00,Em ótimo estado,Em uso,10 a 20 anos,2025-10-22
+277,MOTOR DE PASSO,Motor,Nidec,45M843B090,3,85.00,"Desgastado, mas funcional",Em uso,3 a 7 anos,2025-10-23
+278,MOTOR DE FUSOR,Motor,Nidec,JC31-00150A,2,90.00,"Desgastado, mas funcional",Em uso,4 a 8 anos,2025-10-23
+279,INTERRUPTOR BASCULANTE,Componente Eletrônico,Allsemi,KCD3,6,12.00,"Desgastado, mas funcional",Em uso,10 a 20 anos,2025-10-16
+280,MÓDULO DE CÂMERA RASPBERRY PI,Hardware De Captura De Imagem,JinWen,E363975,1,150.00,Danificado,Em uso,5 a 10 anos,2025-10-23
+281,"CAPACITOR DE POLIESTER 0,1uF 100V",Componente Eletrônico,EPCOS,Indefinido,70,20.99,Em ótimo estado,Lacrado,10 anos,2025-10-21
+282,TERMINAL ILHOS,Componente De Conexão Elétrica,Indefinido,0.5 mm,14,1.99,Em bom estado,Em uso,10 anos,2025-10-24
+283,CABO PONTA DE PROVA,Acessórios De Medição Elétrica,Indefinido,Conexões: banana e jacaré,3,49.50,Regular,Em uso,3 a 10 anos,2025-10-24
+284,PLACA DE REDE(SEM FIO WIFI),Componente Eletrônico,Indefinido,Indefinido,2,249.99,Em bom estado,Em uso,5 a 10 anos,2025-10-23
+285,PLACA DE REDE(COM FIO),Componente Eletrônico,Indefinido,WN7600R-MV,1,240.87,Em bom estado,Em uso,7 anos,2025-10-23
+286,CAPACITOR ELETROLÍTICO 0.47 uF 50V,Componente Eletrônico,UNITED,Indefinido,15,2.00,Em bom estado,Em uso,10 anos,2020-10-14
+287,CAPACITOR ELETROLÍTICO 1uF 50V,Componente Eletrônico,HSCON,Indefinido,15,2.00,Em bom estado,Em uso,5 a 10 anos,2020-10-14
+288,CAPACITOR ELETROLÍTICO 2.2 uF 50V,Componente Eletrônico,Fencon,Indefinido,15,2.86,Em bom estado,Em uso,6 meses,2020-10-14
+289,CAPACITOR ELETROLÍTICO 3.3uF 50V,Componente Eletrônico,HLSC,Indefinido,15,45.59,Em bom estado,Em uso,5 anos,2020-10-14
+290,CAPACITOR ELETROLÍTICO 4.7uF 50V,Componente Eletrônico,henxing,Indefinido,17,25.98,Em bom estado,Em uso,5 anos,2020-10-14
+291,CAPACITOR ELETROLÍTICO 10uF 25V,Componente Eletrônico,Fencon,Indefinido,14,30.89,Em bom estado,Em uso,10 anos,2020-10-14
+292,CAPACITOR ELETROLÍTICO 22uF 25V,Componente Eletrônico,hongx,Indefinido,16,35.98,Em bom estado,Em uso,5 anos,2020-10-14
+293,CAPACITOR ELETROLÍTICO 33uF 16V,Componente Eletrônico,JWCO,Indefinido,16,35.47,Em bom estado,Em uso,10 anos,2020-10-14
+294,CAPACITOR ELETROLÍTICO 47uF 16V,Componente Eletrônico,NOVA LH,Indefinido,10,45.89,Em bom estado,Em uso,5 anos,2020-10-14
+295,CAPACITOR ELETROLÍTICO 47uF 25V,Componente Eletrônico,HITANO,Indefinido,9,35.78,Em bom estado,Em uso,2 anos,2020-10-14
+296,CAPACITOR ELETROLÍTICO 100uF 16V,Componente Eletrônico,ZHC,Indefinido,10,45.56,Em bom estado,Em uso,10 anos,2020-10-14
+297,CAPACITOR ELETROLÍTICO 100uF 25V,Componente Eletrônico,THANG,Indefinido,13,45.56,Em bom estado,Em uso,10 anos,2020-10-14
+298,CAPACITOR ELETROLÍTICO 220uF 10V,Componente Eletrônico,DKS,Indefinido,7,5.67,Em bom estado,Em uso,6 meses,2020-10-14
+299,CAPACITOR ELETROLÍTICO 0.22uF 50V,Componente Eletrônico,JWCO,Indefinido,14,10.56,Em bom estado,Em uso,6 meses,2020-10-14
+300,CAPACITOR ELETROLÍTICO 0.1uF 50V,Componente Eletrônico,KHC,Indefinido,14,30.45,Em bom estado,Em uso,6 meses,2020-10-14
+301,CAPACITOR ELETROLÍTICO 47uF 100V,Componente Eletrônico,Indefinido,Indefinido,2,20.78,Regular,Em uso,6 meses,2025-10-21
+302,CAPACITOR DE CERÂMICA 20PF,Componente Eletrônico,Indefinido,Indefinido,30,23.99,Em bom estado,Em uso,20 anos,2020-10-14
+303,CAPACITOR DE CERÂMICA 30PF,Componente Eletrônico,Indefinido,Indefinido,30,23.99,Em bom estado,Em uso,20 anos,2021-10-14
+304,CAPACITOR DE CERÂMICA 47PF,Componente Eletrônico,Indefinido,Indefinido,30,28.99,Em bom estado,Em uso,20 anos,2022-10-14
+305,CAPACITOR DE CERÂMICA 56PF,Componente Eletrônico,Indefinido,Indefinido,30,25.78,Em bom estado,Em uso,20 anos,2023-10-14
+306,CAPACITOR DE CERÂMICA 68PF,Componente Eletrônico,Indefinido,Indefinido,30,296.72,Em bom estado,Em uso,20 anos,2024-10-14
+307,CAPACITOR DE CERÂMICA 100PF,Componente Eletrônico,Indefinido,Indefinido,30,35.64,Em bom estado,Em uso,20 anos,2025-10-14
+308,CAPACITOR DE CERÂMICA 1NF,Componente Eletrônico,Indefinido,Indefinido,30,24.56,Em bom estado,Em uso,20 anos,2025-10-14
+309,CAPACITOR DE CERÂMICA 10NF,Componente Eletrônico,Indefinido,Indefinido,30,23.76,Em bom estado,Em uso,20 anos,2025-10-14
+310,CAPACITOR DE CERÂMICA 100NF,Componente Eletrônico,Indefinido,Indefinido,30,23.89,Em bom estado,Em uso,1 ano,2025-10-14
+311,PLACA DE CIRCUITO IMPRESSO,Componente De Expansão,Indefinido,Indefinido,6,30.99,Em bom estado,Em uso,20 anos,2025-10-23
+312,RODA,Componente De Locomoção,Indefinido,Indefinido,20,660.99,Em bom estado,Em uso,5 anos,2025-10-23
+313,CHASSI DE CARRO ACRÍLICO,Peça De Montagem,Indefinido,Indefinido,5,30.87,Em bom estado,Em uso,2 a 5 anos,2025-10-23
+314,BATERIA DE LÍTIO,Componente Eletrônico,Indefinido,Indefinido,10,3845.00,Em bom estado,Em uso,2 a 5 anos,2025-10-23
+315,CONECTOR UNIVERSAl PARA CARREGADORES DE NOTEBOOK,Conectores De Alimentação,LVSun,Indefinido,6,98.99,Em bom estado,Em uso,2 a 5 anos,2025-10-23
+316,PLACA DE CIRCUITO INTERNO DE UM ROTEADOR SEM FIO,Placa De Circuito Impresso,Indefinido,TL-WR340G,1,145.90,Em bom estado,Em uso,2 a 5 anos,2025-10-23
+317,MÓDULO DISPLAY LCD 16x2,Componente Eletrônico,RoHS,1602,1,50.45,Em bom estado,Em uso,1 a 2 anos,2025-10-23
+318,VENTILADOR FAN COLLER sem dissipador,Dispositivo Eletromecânico,Intel,Indefinido,1,35.00,Danificado,Em uso,5 a 10 anos,2025-10-23
+319,MICROVENTILADOR COLLER DC BRUSHLESS,Componente Eletrônico,kmex,Indefinido,1,40.00,Danificado,Em uso,2 anos,2025-10-23
+320,CONECTOR DE METAL,Peça,Indefinido,Indefinido,2,121.19,Regular,Em uso,10 a 30 anos,2025-10-23
+321,MOTOR LATERAL DRIVE XBOX,Motor,Indefinido,SMi572-JEL8 290ACP,1,185.00,Em bom estado,Em uso,3 a 7 anos,2025-10-23
+322,CONECTOR KEYSTONE,Conector,Hitop,Cat5e,1,101.70,Em bom estado,Em uso,10 a 20 anos,2025-10-24
+323,KIT DIDÁTICO DE ELETRÔNICA DIGITAL,Kit De Informática,Bit9,Indefinido,6,388.10,Em bom estado,Em uso,5 a 10 anos,2025-10-24
+324,PLACA PROTO’n,Placa De Desenvolvimento,Smart Radio,PIC18F4550,3,44.50,Em bom estado,Em uso,1 a 5 anos,2025-10-24
+325,ABRAÇADEIRA DE NYLON,Dispositivo De Fixação,JNG,"3,6 x 150mm",510,94.18,Em ótimo estado,Em uso,2 a 10 anos,2025-10-24
+326,ESTRUTURAS METÁLICAS,Peça,Indefinido,Indefinido,106,250.00,Em ótimo estado,Em uso,10 anos,2025-11-03
+327,FECHADURA DE PORTA,Mecanismo De Abertura,Jack Lock,Indefinido,3,50.00,"Desgastado, mas funcional",Em uso,10 anos,2025-11-03
+328,CONECTOR JST-XH fêmea xh-5y,Conectores Elétricos,Indefinido,XH-5Y,10,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+329,CONECTOR JST-XH fêmea xh-4y,Conectores Elétricos,Indefinido,XH-4Y,6,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+330,CONECTOR JST-XH fêmea xh-3y,Conectores Elétricos,Indefinido,XH-3Y,7,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+331,CONECTOR JST-XH fêmea xh-2y,Conectores Elétricos,Indefinido,XH-2Y,10,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+332,CONECTOR JST-XH macho xh-5a,Conectores Elétricos,Indefinido,XH-5A,7,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+333,CONECTOR JST-XH macho xh-4a,Conectores Elétricos,Indefinido,XH-4A,7,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+334,CONECTOR JST-XH macho xh-3a,Conectores Elétricos,Indefinido,XH-3A,10,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+335,CONECTOR JST-XH macho xh-2a,Conectores Elétricos,Indefinido,XH-2A,10,3.40,Em ótimo estado,Em uso,5 e 10 anos,2025-11-03
+336,KIT DE CONECTORES JST-XH,Kit De Informática,Indefinido,Indefinido,1,145.00,Em ótimo estado,Em uso,6 a 11 anos,2025-11-03
+337,PINO CONECTOR TERMINAL FÊMEA,Terminais Elétricos,Indefinido,Indefinido,187,25.00,Em ótimo estado,Em uso,10 a 20 anos,2025-11-03
+338,CAPACITOR DE CERÂMICA 10PF,Componente Eletrônico,Indefinido,Indefinido,30,32.67,Em bom estado,Em uso,20 a 40 anos,2025-11-03
+339,RJ - 45,Componente De Redes,Indefinido,Indefido,216,59.60,Em bom estado,Em uso,5 a 15 anos,2025-11-11
+340,Keystone RJ45 Female,Componente De Redes,Indefinido,Indefinido,15,25.00,Em bom estado,Em uso,10 a 20 anos,2025-11-11
+341,CONECTOR FÊMEA RJ45 CAT.6,Componente De Redes,Indefinido,Indefinido,2,34.78,Em bom estado,Em uso,10 a 25 anos,2025-11-11
+342,CONECTOR DE DESLOCAMENTO DE ISOLAMENTO,Componente Elétrico,Indefido,Indefinido,28,5.46,Regular,Em uso,20 ou mais anos,2025-11-17
+343,CONECTOR HEADER MACHO,Componente Eletrônico,Indefinido,Indefinido,14,12.98,Regular,Em uso,10 a 20 anos,2025-11-11
+344,BORNE FÊMEA,Conector Elétrico,Indefinido,Indefinido,4,23.90,Regular,Em uso,25 anos ou mais,2025-11-05
+345,TERMINAL FÊMEA,Dispositivo Auxiliar,Indefinido,Indefinido,35,34.75,Em ótimo estado,Em uso,10 a 20 anos,2025-11-11
+346,HELTEC WIFI LOR32 V2,Placa De Desenvolvimento,Indefinido,Indefinido,2,115.98,Em bom estado,Em uso,5 a 10 anos,2025-11-11
+347,BANCO IMOBILIÁRIO,Entretenimento,ESTRELA,2020,1,129.99,Regular,Em uso,5 a 8 anos,2025-10-13
+348,UNO,Entretenimento,Mattel,Original,1,20.00,Regular,Em uso,2 a 5 anos,2025-10-13
+349,MONOPOLY,Entretenimento,Hasbro,‎C1009,1,150.00,Regular,Em uso,5 a 8 anos,2025-10-13
+350,MEGA KIT UNO ROBÓTICA,Kit De Informática,Casa da Robótica,Indefinido,1,349.99,Em ótimo estado,Lacrado,1 a 4 anos,2025-10-13
+351,JOGOS PARA XBOX,Entretenimento,Xbox,Indefinido,5,250.00,Em bom estado,Em uso,Indeterminado,2025-10-13
+352,CABO VGA,Cabo,Genérica,VGA,4,17.99,Em ótimo estado,Lacrado,5 a 10 anos,2025-10-13
+353,TESTADOR DE CABO DE REDE,Ferramenta,ANENG,Network cable tester,1,23.02,Em ótimo estado,Lacrado,3 a 6 anos,2025-10-13
+354,MOUSE USB,Periférico,Lenovo,Essential USB,1,50.00,Em ótimo estado,Lacrado,1 a 3 anos,2025-10-13
+355,ROTEADOR Huawei,Periférico De Rede,Huawei,HG8145V5,1,200.00,Em bom estado,Em uso,3 a 5 anos,2025-10-13
+356,ROTEADOR Intelbras,Periférico De Rede,Intelbras,WIN 300,1,170.00,Em bom estado,Em uso,3 a 5 anos,2025-10-13
+357,ROTEADOR TP link,Periférico De Rede,TP link,Indefinido,1,200.00,Em bom estado,Em uso,4 a 5 anos,2025-10-13
+358,ENGRENAGEM DE LEGO,Componente Mecânico,Indefinido,Indefinido,48,3.00,"Desgastado, mas funcional",Em uso,10 a 20 anos,2025-10-13
+359,ILHÓ,Peça,Indefinido,Indefinido,4,1.25,Regular,Em uso,10 a 50 anos,2025-10-13
+360,BUCHA DE BORRACHA,Componente Mecânico,Indefinido,Indefinido,1,3.00,Regular,Em uso,3 a 5 anos,2025-10-13
+361,PLUGUE RCA MACHO,Conector De Áudio,Indefinido,Indefinido,3,10.00,Regular,Em uso,5 a 10 anos,2025-10-21
+362,CHAVE DIP,Dispositivo Eletrônico,Indefinido,Indefinido,1,6.00,Regular,Em uso,10 a 20 anos,2025-10-21
+363,APLICADOR SÊMEN,Ferramenta,Indefinido,Indefinido,87,90.00,Regular,Em uso,5 a 10 anos,2025-10-21
+364,CHAVE ALLEN,Ferramenta,Indefinido,Indefinido,15,17.50,"Desgastado, mas funcional",Em uso,10 a 20 anos,2025-10-21
+365,BITS DE CHAVE DE FENDA DE PRECISÃO,Ferramenta,Indefinido,Indefinido,2,30.00,Regular,Em uso,5 a 10 anos,2025-10-21
+366,ESPAÇADOR DE METAL,Ferramenta,Indefinido,Indefinido,5,8.50,Regular,Em uso,10 a 30 anos,2025-10-21
+367,MOLA,Componente Mecânico,Indefinido,Indefinido,2,5.50,Regular,Em uso,10 a 20 anos,2025-10-21
+368,ARRUELA,Componente De Fixação,Indefinido,Indefinido,9,1.60,Regular,Em uso,10 a 50 anos,2025-10-13
+369,DISSIPADOR DE ALUMÍNIO,Dispositivo Eletrônico,Indefinido,Indefinido,1,30.00,Regular,Em uso,10 a 20 anos,2025-10-21
+370,CACHIMBO DE VELA DE INGNIÇÃO,Peça,Indefinido,Indefinido,15,12.50,Regular,Em uso,3 a 5 anos,2025-10-21
+371,BOLA DE LEGO,Peça,Indefinido,Indefinido,1,2.00,Regular,Em uso,10 a 20 anos,2025-10-21
+372,DRIVER DE HASTE DE ATERRAMENTO,Ferramenta,Indefinido,Indefinido,11,60.00,Regular,Em uso,5 a 10 anos,2025-10-21
+373,CHAPA DE FIXAÇÃO,Ferramenta,Indefinido,Indefinido,4,17.50,Regular,Em uso,10 a 50 anos,2025-10-21
+374,PEÇA,Ferramenta,Indefinido,Indefinido,30,0.55,Regular,Em uso,10 a 50 anos,2025-10-21
+375,PARAFUSO,Peça,Indefinido,Indefinido,114,6.00,Em bom estado,Em uso,1 a 3 anos,2025-10-21
+376,ESPONJA,Produto De Limpeza,Indefinido,Indefinido,9,25.00,Regular,Em uso,10 a 20 anos,2025-10-21
+377,ALAVANCA L,Ferramenta,Indefinido,Indefinido,2,17.50,Regular,Em uso,10 a 20 anos,2025-10-21
+378,AJUSTADOR DE PLACA,Peça,Indefinido,Indefinido,35,12.50,Regular,Em uso,5 a 10 anos,2025-11-17
+379,ENGRENAGEM DE LEGO,Peça,Indefinido,Indefinido,122,3.00,Regular,Em uso,5 a 10 anos,2025-11-18
+380,MÓDULO LED,Placa,Indefinido,Indefinido,1,12.50,Regular,Em uso,5 a 10 anos,2025-11-19
+381,ENGRENAGEM DE ALIMENTAÇÃO,Peça,Indefinido,Indefinido,1,6.00,Regular,Em uso,10 a 20 anos,2025-11-21
+382,ENGRENAGEM PLÁSTICA PEQUENA,Peça,Indefinido,Indefinido,55,3.00,Regular,Em uso,10 a 20 anos,2025-10-21
+383,KIT MICRO BIT,Kit,BBC,25 Leds,5,300.00,Em ótimo estado,Lacrado,Indeterminado,2025-10-22
+384,KIT LEGO,Peça,Indefinido,Indefinido,22,450.00,Em ótimo estado,Em uso,Indeterminado,2025-10-22
+385,KIT ROBÓTICA,Eletrônico,Lego,Education WeDo 2.0,4,2499.00,Em ótimo estado,Em uso,Indeterminado,2025-10-22
+386,NOTEBOOK,Laptop,Dell,Inspiron 15,1,3199.00,Em bom estado,Em uso,Indeterminado,2025-10-22
+387,CHROMEBOOK,Laptop,Positivo,N2110,1,619.00,Danificado,Lacrado,Indeterminado,2025-10-22
+388,KIT LEGO MINDSTORMS EV3,Peça,Lego,EV3,10,90.00,Em ótimo estado,Lacrado,Indeterminado,2025-10-22
+389,KIT LEGO Education 9689,Peça,Lego,Education 9689,10,1642.85,Em bom estado,Em uso,Indeterminado,2025-11-10
+390,NOTEBOOK ASUS,Laptop,ASUS,A43E,1,1550.00,Danificado,Danificado,Indeterminado,2025-10-22
+391,CLIPES PARA PAPÉIS,Material De Escritório,BRW,8/0,100,21.57,Danificado,Em uso,2 anos ou mais,2025-11-03
+392,GRAMPOS,Material De Escritório,BRW,26/6,20,15.99,Em ótimo estado,Em uso,5 a 20 anos,2025-11-03
+393,MINI TRENA 1m,Instrumento De Medição,Starrett,V14-1M6,1,15.99,Em ótimo estado,Em uso,3 a 10 anos,2025-11-04
+394,MULTÍMETRO ANALÓGICO,Instrumento De Medição Elétrica,Minipa,ET-3021,1,399.90,Danificado,Em uso,5 a 10 anos,2025-11-04
+395,MULTÍMETRO DIGITAL,Instrumento De Medição Elétrica,HYX,DT830D,6,55.90,Danificado,Em conserto,5 a 10 anos,2025-11-04
+396,MULTÍMETRO DIGITAL,Instrumento De Medição Elétrica,Hikari,HM-1000,4,55.90,Danificado,Em uso,5 a 10 anos,2025-11-04
+397,CRONÔMETRO,Instrumento De Medição De Tempo,Vollo,vl-510,4,118.82,Danificado,Em uso,2 anos ou mais,2025-11-04
+398,ESTAÇÃO DE SOLDA ANALÓGICA,Ferramenta,Hikari,hk-936b,3,203.04,Regular,Em uso,5 a 10 anos,2025-11-04
+399,CADDY(suporte de HD),Acessório De Hardware,Indefinido,1XNOC1,1,69.00,Em bom estado,Em uso,5 a 15 anos,2025-11-04
+400,BOCAL,Material Elétrico,ILUMI,Indefinido,1,14.99,Em ótimo estado,Em uso,6 meses,2025-11-04
+401,KIT DE LEGO 204 pcs,Brinquedos,Lego education,Indefinido,1,519.67,Em ótimo estado,Em uso,20 anos,2025-11-04
+402,BANDEJA DE FERRAMENTAS,Instrumento De Organização,Indefinido,Indefinido,4,38.22,Em bom estado,Em uso,1 a 4 anos,2025-11-04
+403,CASE PROTETORA,Acessório De Informática,Positivo,Indefinido,3,68.00,Em bom estado,Em uso,1 a 3 anos,2025-11-04
+404,SUPORTE DE REDE DE TÊNIS DE MESA,Equipamento Auxiliar,Indefinido,Indefinido,2,147.78,Em ótimo estado,Em uso,3 a 10 anos,2025-11-04
+405,MAXONIC,Equipamento Auxiliar,Indefinido,RPM343,2,25.00,Em ótimo estado,Em uso,2 anos,2025-11-04
+406,ELÁSTICO,Armarinho,Indefinido,Indefinido,1,32.00,Em ótimo estado,Em uso,2 anos,2025-11-04
+407,COLA BRANCA 1KG,Material Escolar,Formica,Indefinido,1,38.90,Em bom estado,Em uso,1 ano,2025-11-04
+408,COLA BRANCA 90G,Material Escolar,Maxi Cola,MX90,1,15.99,Em ótimo estado,Em uso,6 meses,2025-11-04
+409,CARIMBO,Material De Escritório,Indefinido,Indefinido,1,23.97,Em ótimo estado,Em uso,1 a 3 anos,2025-11-04
+410,AlMOFADA DE CARIMBO,Material De Escritório,Radex,Indefinido,1,41.00,Em ótimo estado,Em uso,1 a 3 anos,2025-11-04

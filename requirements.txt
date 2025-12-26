@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+firebase-admin
+streamlit
+streamlit-authenticator
+google-cloud-firestore
+
+# Dependências adicionais (instale se necessário)
+fpdf2
