@@ -68,6 +68,7 @@ st.title("📋 Gestão Interna GP MECATRÔNICA")
 ###################### MENU LATERAL ######################
 role_label = f" ({role})" if role else ""
 st.sidebar.markdown(f"👋 Olá, **{email}**{role_label}")
+st.sidebar.caption(f"Email detectado: {email}")
 
 menu = st.sidebar.selectbox(
     "📋 Navegação",
