@@ -16,6 +16,8 @@ def _init_session():
         st.session_state.usuario = None
     if "role" not in st.session_state:
         st.session_state.role = None
+    if "nome_usuario" not in st.session_state:
+        st.session_state.nome_usuario = None
 
 
 def _render_login():
@@ -27,10 +29,11 @@ def _render_login():
             senha = st.text_input("Senha", type="password", placeholder="••••••••")
             entrar = st.form_submit_button("Entrar", use_container_width=True)
             if entrar:
-                ok, role = autenticar_usuario(usuario, senha)
+                ok, role, nome = autenticar_usuario(usuario, senha)
                 if ok:
                     st.session_state.autenticado = True
                     st.session_state.usuario = usuario.strip()
+                    st.session_state.nome_usuario = nome
                     st.session_state.role = role
                     st.success("Login realizado com sucesso. Bem-vindo(a)!")
                     st.rerun()
@@ -50,6 +53,7 @@ def _realizar_logout():
     st.session_state.autenticado = False
     st.session_state.usuario = None
     st.session_state.role = None
+    st.session_state.nome_usuario = None
     try:
         st.query_params.clear()
     except Exception:
@@ -82,7 +86,8 @@ st.title("📋 Gestão Interna GP MECATRÔNICA")
 
 ###################### MENU LATERAL ######################
 role_label = f" ({st.session_state.role})" if st.session_state.role else ""
-st.sidebar.markdown(f"👋 Olá, **{st.session_state.usuario}**{role_label}")
+display_name = st.session_state.nome_usuario or st.session_state.usuario
+st.sidebar.markdown(f"👋 Olá, **{display_name}**{role_label}")
 
 menu = st.sidebar.selectbox(
     "📋 Navegação",
@@ -116,6 +121,23 @@ except Exception as e:
     st.error(f"Ocorreu um erro ao carregar a página: {e}")
 
 st.sidebar.markdown("---")
+st.sidebar.markdown(
+    """
+    <style>
+    div[data-testid="stSidebar"] button {
+        background: #3CB371;
+        color: #ffffff;
+        border: 1px solid #3CB371;
+    }
+    div[data-testid="stSidebar"] button:hover {
+        background: #2f9a5e;
+        color: #ffffff;
+        border: 1px solid #2f9a5e;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 logout_clicked = st.sidebar.button("🔚 Encerrar sessão", use_container_width=True)
 if logout_clicked:
     _realizar_logout()

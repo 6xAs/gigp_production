@@ -16,9 +16,9 @@ def _is_active(status: object) -> bool:
     return str(status).strip().lower() in {"active", "ativo", "ativa", "enabled", "true", "1"}
 
 
-def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str | None]:
+def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str | None, str | None]:
     if not email or not senha:
-        return False, None
+        return False, None, None
 
     email_normalizado = email.strip().lower()
     db = init_firestore()
@@ -26,7 +26,7 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
     try:
         doc_ref = db.collection("users").document(email_normalizado).get(retry=retry, timeout=4)
     except (GoogleAPICallError, RetryError):
-        return False, "firestore_indisponivel"
+        return False, "firestore_indisponivel", None
     data = doc_ref.to_dict() if doc_ref.exists else None
 
     if not data:
@@ -38,17 +38,18 @@ def autenticar_usuario(email: str | None, senha: str | None) -> Tuple[bool, str 
                 .get(retry=retry, timeout=4)
             )
         except (GoogleAPICallError, RetryError):
-            return False, "firestore_indisponivel"
+            return False, "firestore_indisponivel", None
         if query:
             data = query[0].to_dict()
         else:
-            return False, None
+            return False, None, None
 
     senha_db = data.get("senha")
     if senha_db is None or senha_db != senha:
-        return False, None
+        return False, None, None
 
     if not _is_active(data.get("status")):
-        return False, None
+        return False, None, None
 
-    return True, data.get("role")
+    nome = data.get("name") or data.get("nome") or data.get("usuario")
+    return True, data.get("role"), nome
