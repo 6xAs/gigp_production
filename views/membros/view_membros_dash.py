@@ -112,14 +112,16 @@ def _validar_e_preparar_membro(
 
     _texto("NOME", obrigatorio=True, max_len=120)
     _texto("CPF", obrigatorio=True, max_len=20)
-    _texto("EMAIL", max_len=120)
-    _texto("CONTATO", max_len=60)
-    _texto("EQUIPE DE PROJETO", max_len=80)
+    _texto("EMAIL", obrigatorio=True, max_len=120)
+    _texto("CONTATO", obrigatorio=True, max_len=60)
+    _texto("EQUIPE DE PROJETO", obrigatorio=True, max_len=80)
     _texto("PROJETO ATUAL", max_len=120)
-    _texto("ORIENTADOR", max_len=120)
-    _texto("CURSO", max_len=120)
+    _texto("ORIENTADOR", obrigatorio=True, max_len=120)
+    _texto("CURSO", obrigatorio=True, max_len=120)
+    _texto("SÉRIE", obrigatorio=True, max_len=40)
+    _texto("ANO", obrigatorio=True, max_len=10)
     _texto("LATTES", max_len=200)
-    _texto("MATRÍCULA", max_len=40)
+    _texto("MATRÍCULA", obrigatorio=True, max_len=40)
     _texto("TAMANHO CAMISETA", max_len=5)
     _texto("NÍVEL ESCOLARIDADE", max_len=60)
     _texto("STATUS CURSO", max_len=40)
@@ -135,6 +137,7 @@ def _validar_e_preparar_membro(
         except Exception:
             erros.append("DATA NASCIMENTO: data inválida")
     else:
+        erros.append("DATA NASCIMENTO: obrigatório")
         payload["DATA NASCIMENTO"] = ""
 
     if payload["CPF"]:
@@ -320,11 +323,11 @@ def cadastrar_membro():
             with col1:
                 nome = st.text_input("Nome Completo *", placeholder="Digite o nome completo")
                 cpf = st.text_input("CPF *", placeholder="000.000.000-00")
-                email = st.text_input("Email", placeholder="email@exemplo.com")
-                contato = st.text_input("Contato", placeholder="(00) 99999-9999")
-                nascimento = st.date_input("Data de Nascimento", format="DD/MM/YYYY", min_value=date(1900, 1, 1), max_value=date.today())
+                email = st.text_input("Email *", placeholder="email@exemplo.com")
+                contato = st.text_input("Contato *", placeholder="(00) 99999-9999")
+                nascimento = st.date_input("Data de Nascimento *", format="DD/MM/YYYY", min_value=date(1900, 1, 1), max_value=date.today())
                 equipes_sel = st.multiselect(
-                    "Equipe(s) de Projeto",
+                    "Equipe(s) de Projeto *",
                     opcoes_equipes,
                     help="Selecione uma ou mais equipes existentes",
                 )
@@ -362,7 +365,7 @@ def cadastrar_membro():
                 projeto_atual = ", ".join(projetos_total)
 
                 orientadores_sel = st.multiselect(
-                    "Orientador(es)",
+                    "Orientador(es) *",
                     opcoes_orientadores,
                     help="Selecione um ou mais orientadores existentes",
                 )
@@ -380,11 +383,19 @@ def cadastrar_membro():
                         orientadores_total.append(o.strip())
                 orientador = ", ".join(orientadores_total)
 
-                curso = st.text_input("Curso")
+                curso = st.text_input("Curso *")
+                serie = st.text_input("Série *", placeholder="Ex: 1ª série ou 3º ano")
+                ano = st.number_input(
+                    "Ano *",
+                    min_value=1900,
+                    max_value=date.today().year + 5,
+                    value=date.today().year,
+                    step=1,
+                )
 
             with col2:
                 lattes = st.text_input("Currículo Lattes", placeholder="URL do currículo Lattes")
-                matricula = st.text_input("Matrícula", placeholder="Número de matrícula")
+                matricula = st.text_input("Matrícula *", placeholder="Número de matrícula")
                 camiseta = st.selectbox("Tamanho Camiseta", ["P", "M", "G", "GG"])
                 escolaridade = st.selectbox("Escolaridade", ["Ensino Médio", "Técnico", "Superior", "Pós-Graduação"])
                 status_curso = st.selectbox("Status do Curso", ["Cursando", "Trancado", "Concluído"])
@@ -425,6 +436,8 @@ def cadastrar_membro():
                     "PROJETO ATUAL": projeto_atual,
                     "ORIENTADOR": orientador,
                     "CURSO": curso,
+                    "SÉRIE": serie,
+                    "ANO": str(ano),
                     "LATTES": lattes,
                     "MATRÍCULA": matricula,
                     "TAMANHO CAMISETA": camiseta,
@@ -441,6 +454,7 @@ def cadastrar_membro():
                     emails_existentes=emails_existentes,
                 )
                 if erros:
+                    st.warning("Alguns campos obrigatórios não foram preenchidos ou estão inválidos.")
                     for err in erros:
                         st.error(err)
                     return
