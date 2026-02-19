@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 from datetime import date
 from math import ceil
+from urllib.parse import quote_plus
 import unicodedata
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../")))
@@ -115,7 +116,7 @@ def _validar_e_preparar_membro(
     _texto("EMAIL", obrigatorio=True, max_len=120)
     _texto("CONTATO", obrigatorio=True, max_len=60)
     _texto("EQUIPE DE PROJETO", obrigatorio=True, max_len=80)
-    _texto("PROJETO ATUAL", max_len=120)
+    _texto("PROJETO ATUAL", obrigatorio=True, max_len=120)
     _texto("ORIENTADOR", obrigatorio=True, max_len=120)
     _texto("CURSO", obrigatorio=True, max_len=120)
     _texto("SÉRIE", obrigatorio=True, max_len=40)
@@ -165,6 +166,32 @@ def _validar_e_preparar_membro(
             payload["EMAIL"] = email_norm
 
     return payload, erros
+
+
+def _parse_data_nascimento(valor) -> date | None:
+    if isinstance(valor, date):
+        return valor
+    if valor is None:
+        return None
+    texto = str(valor).strip()
+    if not texto:
+        return None
+    for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%Y/%m/%d"):
+        try:
+            return pd.to_datetime(texto, format=fmt, errors="raise").date()
+        except Exception:
+            continue
+    try:
+        d = pd.to_datetime(texto, errors="coerce")
+        if pd.isna(d):
+            return None
+        return d.date()
+    except Exception:
+        return None
+
+
+def _link_editar_membro(cpf: str) -> str:
+    return f"?editar_cpf={quote_plus(str(cpf).strip())}"
 
 @st.cache_data(show_spinner=False, ttl=60)
 def carregar_membros_df():
@@ -346,7 +373,7 @@ def cadastrar_membro():
                 equipe = ", ".join(equipes_total)
 
                 projetos_sel = st.multiselect(
-                    "Projeto(s) Atual(is)",
+                    "Projeto(s) Atual(is) *",
                     opcoes_projetos,
                     help="Selecione um ou mais projetos existentes",
                 )
@@ -465,6 +492,269 @@ def cadastrar_membro():
                     st.rerun()
                 except Exception as e:
                     st.error(f"Falha ao salvar no Firebase: {e}")
+
+    modal()
+
+
+def editar_membro_modal(cpf_alvo: str):
+    @st.dialog("✏️ Editar dados do membro")
+    def modal():
+        df_base = carregar_membros_df()
+        if df_base.empty or "CPF" not in df_base.columns:
+            st.error("Não foi possível carregar os dados do membro.")
+            return
+
+        def _cpf_digits(v: str) -> str:
+            return "".join(ch for ch in str(v) if ch.isdigit())
+
+        cpf_alvo_digits = _cpf_digits(cpf_alvo)
+        df_busca = df_base.copy()
+        df_busca["_CPF_DIGITS"] = df_busca["CPF"].apply(_cpf_digits)
+        membro_df = df_busca[df_busca["_CPF_DIGITS"] == cpf_alvo_digits]
+        if membro_df.empty:
+            st.error("Membro não encontrado para edição.")
+            return
+
+        membro = membro_df.iloc[0].to_dict()
+        cpf_persistido = str(membro.get("CPF", cpf_alvo)).strip() or cpf_alvo
+
+        opcoes_texto = _opcoes_textuais(df_base)
+        opcoes_equipes = opcoes_texto["EQUIPE DE PROJETO"]
+        opcoes_projetos = opcoes_texto["PROJETO ATUAL"]
+        opcoes_orientadores = ORIENTADORES_FIXOS
+
+        cpf_existentes = {
+            _cpf_digits(cpf)
+            for cpf in df_base.get("CPF", pd.Series()).dropna().tolist()
+            if _cpf_digits(cpf) != cpf_alvo_digits
+        }
+        email_atual = str(membro.get("EMAIL", "")).lower().strip()
+        emails_existentes = {
+            str(email).lower().strip()
+            for email in df_base.get("EMAIL", pd.Series()).dropna().tolist()
+            if str(email).lower().strip() != email_atual
+        }
+
+        equipes_atuais = [v.strip() for v in str(membro.get("EQUIPE DE PROJETO", "")).split(",") if v.strip()]
+        projetos_atuais = [v.strip() for v in str(membro.get("PROJETO ATUAL", "")).split(",") if v.strip()]
+        orientadores_atuais = [v.strip() for v in str(membro.get("ORIENTADOR", "")).split(",") if v.strip()]
+        opcoes_equipes_edicao = list(dict.fromkeys(opcoes_equipes + equipes_atuais))
+        opcoes_projetos_edicao = list(dict.fromkeys(opcoes_projetos + projetos_atuais))
+        opcoes_orientadores_edicao = list(dict.fromkeys(opcoes_orientadores + orientadores_atuais))
+
+        data_nascimento_padrao = _parse_data_nascimento(membro.get("DATA NASCIMENTO")) or date(2000, 1, 1)
+        ano_padrao = pd.to_numeric(pd.Series([membro.get("ANO", date.today().year)]), errors="coerce").iloc[0]
+        if pd.isna(ano_padrao):
+            ano_padrao = date.today().year
+        ano_padrao = int(ano_padrao)
+
+        camiseta_opts = ["P", "M", "G", "GG"]
+        escolaridade_opts = ["Ensino Médio", "Técnico", "Superior", "Pós-Graduação"]
+        status_curso_opts = ["Cursando", "Trancado", "Concluído"]
+        rank_opts = ["E", "D", "C", "B", "A", "S"]
+        tipo_opts = ["Discente", "Professor"]
+        status_opts = ["Ativo", "Inativo", "Pendente"]
+
+        camiseta_atual = str(membro.get("TAMANHO CAMISETA", "M")).strip() or "M"
+        escolaridade_atual = str(membro.get("NÍVEL ESCOLARIDADE", "Ensino Médio")).strip() or "Ensino Médio"
+        status_curso_atual = str(membro.get("STATUS CURSO", "Cursando")).strip() or "Cursando"
+        rank_atual = str(membro.get("Rank GP", "E")).strip() or "E"
+        tipo_atual = str(membro.get("TIPO MEMBRO", "Discente")).strip() or "Discente"
+        status_atual = str(membro.get("STATUS", "Ativo")).strip() or "Ativo"
+
+        with st.form(f"form_editar_membro_{cpf_alvo_digits}"):
+            col1, col2 = st.columns(2)
+
+            with col1:
+                nome = st.text_input("Nome Completo *", value=str(membro.get("NOME", "")))
+                st.text_input("CPF *", value=cpf_persistido, disabled=True)
+                email = st.text_input("Email *", value=str(membro.get("EMAIL", "")))
+                contato = st.text_input("Contato *", value=str(membro.get("CONTATO", "")))
+                nascimento = st.date_input(
+                    "Data de Nascimento *",
+                    value=data_nascimento_padrao,
+                    format="DD/MM/YYYY",
+                    min_value=date(1900, 1, 1),
+                    max_value=date.today(),
+                )
+                equipes_sel = st.multiselect(
+                    "Equipe(s) de Projeto *",
+                    opcoes_equipes_edicao,
+                    default=[e for e in equipes_atuais if e in opcoes_equipes_edicao],
+                    help="Selecione uma ou mais equipes existentes",
+                )
+                equipe_custom_raw = st.text_input(
+                    "Adicionar equipe(s) nova(s)",
+                    placeholder="Separe por vírgula para múltiplas",
+                )
+                equipes_custom = [e.strip() for e in equipe_custom_raw.split(",") if e.strip()]
+                equipes_total: list[str] = []
+                vistos_eq = set()
+                for e in equipes_sel + equipes_custom:
+                    chave = _normalizar_opcao(e)
+                    if chave and chave not in vistos_eq:
+                        vistos_eq.add(chave)
+                        equipes_total.append(e.strip())
+                equipe = ", ".join(equipes_total)
+
+                projetos_sel = st.multiselect(
+                    "Projeto(s) Atual(is) *",
+                    opcoes_projetos_edicao,
+                    default=[p for p in projetos_atuais if p in opcoes_projetos_edicao],
+                    help="Selecione um ou mais projetos existentes",
+                )
+                projeto_custom_raw = st.text_input(
+                    "Adicionar projeto(s) novo(s)",
+                    placeholder="Separe por vírgula para múltiplos",
+                )
+                projetos_custom = [p.strip() for p in projeto_custom_raw.split(",") if p.strip()]
+                projetos_total: list[str] = []
+                vistos_proj = set()
+                for p in projetos_sel + projetos_custom:
+                    chave = _normalizar_opcao(p)
+                    if chave and chave not in vistos_proj:
+                        vistos_proj.add(chave)
+                        projetos_total.append(p.strip())
+                projeto_atual = ", ".join(projetos_total)
+
+                orientadores_sel = st.multiselect(
+                    "Orientador(es) *",
+                    opcoes_orientadores_edicao,
+                    default=[o for o in orientadores_atuais if o in opcoes_orientadores_edicao],
+                    help="Selecione um ou mais orientadores existentes",
+                )
+                orientador_custom_raw = st.text_input(
+                    "Adicionar orientador(es) novo(s)",
+                    placeholder="Separe por vírgula para múltiplos",
+                )
+                orientadores_custom = [o.strip() for o in orientador_custom_raw.split(",") if o.strip()]
+                orientadores_total = []
+                vistos_ori = set()
+                for o in orientadores_sel + orientadores_custom:
+                    chave = _normalizar_opcao(o)
+                    if chave and chave not in vistos_ori:
+                        vistos_ori.add(chave)
+                        orientadores_total.append(o.strip())
+                orientador = ", ".join(orientadores_total)
+
+                curso = st.text_input("Curso *", value=str(membro.get("CURSO", "")))
+                serie = st.text_input("Série *", value=str(membro.get("SÉRIE", "")), placeholder="Ex: 1ª série ou 3º ano")
+                ano = st.number_input(
+                    "Ano *",
+                    min_value=1900,
+                    max_value=date.today().year + 5,
+                    value=ano_padrao,
+                    step=1,
+                )
+
+            with col2:
+                lattes = st.text_input("Currículo Lattes", value=str(membro.get("LATTES", "")), placeholder="URL do currículo Lattes")
+                matricula = st.text_input("Matrícula *", value=str(membro.get("MATRÍCULA", "")), placeholder="Número de matrícula")
+                camiseta = st.selectbox(
+                    "Tamanho Camiseta",
+                    camiseta_opts,
+                    index=camiseta_opts.index(camiseta_atual) if camiseta_atual in camiseta_opts else 1,
+                )
+                escolaridade = st.selectbox(
+                    "Escolaridade",
+                    escolaridade_opts,
+                    index=escolaridade_opts.index(escolaridade_atual) if escolaridade_atual in escolaridade_opts else 0,
+                )
+                status_curso = st.selectbox(
+                    "Status do Curso",
+                    status_curso_opts,
+                    index=status_curso_opts.index(status_curso_atual) if status_curso_atual in status_curso_opts else 0,
+                )
+
+            st.markdown("#### Áreas de Interesse")
+            areas_predefinidas = [
+                "Programação", "Robótica", "Inteligência Artificial", "Banco de Dados",
+                "Desenvolvimento Web", "Redes de Computadores", "Manutenção de Computador",
+                "Segurança da Informação", "Design Gráfico", "Análise de Dados",
+                "Automação", "IoT (Internet das Coisas)", "Engenharia de Software",
+                "Computação em Nuvem", "Eletrônica Digital"
+            ]
+            interesses_atuais = {
+                i.strip()
+                for i in str(membro.get("ÁREAS DE INTERESSE", "")).split(",")
+                if i.strip()
+            }
+            interesses_selecionados = []
+            cols = st.columns(3)
+            for i, area in enumerate(areas_predefinidas):
+                checked = cols[i % 3].checkbox(
+                    area,
+                    value=(area in interesses_atuais),
+                    key=f"edit_area_{cpf_alvo_digits}_{i}",
+                )
+                if checked:
+                    interesses_selecionados.append(area)
+            interesses = ", ".join(interesses_selecionados)
+
+            col4, col5, col6 = st.columns(3)
+            with col4:
+                rank_gp = st.selectbox(
+                    "Rank GP",
+                    rank_opts,
+                    index=rank_opts.index(rank_atual) if rank_atual in rank_opts else 0,
+                )
+            with col5:
+                tipo_membro = st.selectbox(
+                    "Tipo de Membro",
+                    tipo_opts,
+                    index=tipo_opts.index(tipo_atual) if tipo_atual in tipo_opts else 0,
+                )
+            with col6:
+                status = st.selectbox(
+                    "Status",
+                    status_opts,
+                    index=status_opts.index(status_atual) if status_atual in status_opts else 0,
+                )
+
+            enviar = st.form_submit_button("Atualizar Dados")
+            if enviar:
+                membro_raw = {
+                    "NOME": nome,
+                    "CPF": cpf_persistido,
+                    "EMAIL": email,
+                    "CONTATO": contato,
+                    "DATA NASCIMENTO": nascimento,
+                    "EQUIPE DE PROJETO": equipe,
+                    "PROJETO ATUAL": projeto_atual,
+                    "ORIENTADOR": orientador,
+                    "CURSO": curso,
+                    "SÉRIE": serie,
+                    "ANO": str(ano),
+                    "LATTES": lattes,
+                    "MATRÍCULA": matricula,
+                    "TAMANHO CAMISETA": camiseta,
+                    "NÍVEL ESCOLARIDADE": escolaridade,
+                    "STATUS CURSO": status_curso,
+                    "ÁREAS DE INTERESSE": interesses,
+                    "TIPO MEMBRO": tipo_membro,
+                    "Rank GP": rank_gp,
+                    "STATUS": status,
+                }
+                payload, erros = _validar_e_preparar_membro(
+                    membro_raw,
+                    cpfs_existentes=cpf_existentes,
+                    emails_existentes=emails_existentes,
+                )
+                if erros:
+                    st.warning("Alguns campos obrigatórios não foram preenchidos ou estão inválidos.")
+                    for err in erros:
+                        st.error(err)
+                    return
+
+                payload["CPF"] = cpf_persistido
+                try:
+                    salvar_membro_firestore(payload)
+                    st.session_state["toast_membros"] = {"text": "Dados do membro atualizados!", "icon": "✅"}
+                    st.success("✅ Dados atualizados com sucesso!")
+                    st.cache_data.clear()
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"Falha ao atualizar no Firebase: {e}")
 
     modal()
 
@@ -610,6 +900,14 @@ def gestao_membros():
     # Garante CSS do diálogo carregado antes de abrir o modal
     _inject_dialog_css()
 
+    cpf_edicao_query = st.query_params.get("editar_cpf")
+    if cpf_edicao_query:
+        try:
+            st.query_params.pop("editar_cpf")
+        except Exception:
+            pass
+        editar_membro_modal(str(cpf_edicao_query))
+
     # Barra de ações
     a1, a2, a3, _ = st.columns([1,1,1,4])
     if a1.button("➕ Cadastrar novo membro"):
@@ -686,6 +984,8 @@ def gestao_membros():
                 base_cols = [c for c in df_page_display.columns if c != "EXCLUIR"]
                 df_page_display = df_page_display[base_cols + ["EXCLUIR"]]
             if "CPF" in df_page_display.columns:
+                df_page_display["EDITAR"] = df_page_display["CPF"].apply(_link_editar_membro)
+            if "CPF" in df_page_display.columns:
                 df_page_display["ATUALIZADO"] = df_page_display["CPF"].apply(
                     lambda c: "✅" if c in last_updated_cpfs else ""
                 )
@@ -693,6 +993,8 @@ def gestao_membros():
                 colunas_visiveis_with_status = colunas_visiveis.copy()
                 if editavel and "EXCLUIR" not in colunas_visiveis_with_status:
                     colunas_visiveis_with_status.append("EXCLUIR")
+                if "EDITAR" not in colunas_visiveis_with_status:
+                    colunas_visiveis_with_status.append("EDITAR")
                 if "ATUALIZADO" not in colunas_visiveis_with_status:
                     colunas_visiveis_with_status.append("ATUALIZADO")
                 df_page_display = df_page_display[colunas_visiveis_with_status]
@@ -708,6 +1010,7 @@ def gestao_membros():
                 num_rows="fixed",
                 column_config={
                     "EXCLUIR": st.column_config.CheckboxColumn("Excluir", help="Marque para remover este membro"),
+                    "EDITAR": st.column_config.LinkColumn("Editar", help="Abrir modal de edição deste membro", display_text="✏️ Abrir"),
                     "NOME": st.column_config.TextColumn("Nome Completo", disabled=not editavel),
                     "CPF": st.column_config.TextColumn("CPF", disabled=True),
                     "DATA NASCIMENTO": st.column_config.TextColumn("Data Nasc.", disabled=not editavel),
@@ -736,7 +1039,7 @@ def gestao_membros():
 
                 try:
                     # Remover colunas de UI do retorno para comparar
-                    retorno_clean = retorno.drop(columns=[c for c in ["DETALHES", "ATUALIZADO", "EXCLUIR"] if c in retorno.columns])
+                    retorno_clean = retorno.drop(columns=[c for c in ["DETALHES", "ATUALIZADO", "EXCLUIR", "EDITAR"] if c in retorno.columns])
                     orig_clean = df_page.drop(columns=[c for c in ["DETALHES", "ATUALIZADO", "EXCLUIR"] if c in df_page.columns], errors='ignore')
                     if "CPF" in retorno_clean.columns and "CPF" in orig_clean.columns:
                         retorno_idx = retorno_clean.set_index("CPF")
@@ -744,7 +1047,7 @@ def gestao_membros():
                         campos_editaveis = [
                             c for c in [
                                 "NOME","EMAIL","CONTATO","LATTES","MATRÍCULA",
-                                "EQUIPE DE PROJETO","ORIENTADOR","SÉRIE","ANO",
+                                "EQUIPE DE PROJETO","PROJETO ATUAL","ORIENTADOR","SÉRIE","ANO",
                                 "Rank GP","STATUS"
                             ] if c in retorno_idx.columns
                         ]
